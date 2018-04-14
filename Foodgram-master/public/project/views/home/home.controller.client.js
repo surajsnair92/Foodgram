@@ -46,7 +46,6 @@
                     RestService
                         .findAllCategories(a)
                         .success(function (data) {
-                            console.log(data)
                             if (data.length == 0) {
                                 vm.display = "Please enable location services";
                             } else {
@@ -60,33 +59,38 @@
         init();
 
         function register(newuser) {
-            if (newuser && newuser.username && newuser.password && newuser.cpassword) {
-                if (newuser.password === newuser.cpassword) {
-                    UserService
-                        .findUserByUsername(newuser.username)
-                        .success(function (user) {
-                            vm.uerror = "Username already taken";
-                        })
-                        .error(function () {
-                            newuser.type = "user";
-                            UserService
-                            .register(newuser)
-                            .success(function (newUser) {
-                                var user = newUser;
-                                $rootScope.currentUser = newUser;
-                                $location.url("/user/" + newUser._id);
+            if (newuser.userrole == "User") {
+                if (newuser && newuser.username && newuser.password && newuser.cpassword) {
+                    if (newuser.password === newuser.cpassword) {
+                        UserService
+                            .findUserByUsername(newuser.username)
+                            .success(function (user) {
+                                vm.uerror = "Username already taken";
                             })
-                                .error(function () {
-                                    vm.uerror = "User Registration Failed";
-                                })
-                    });
+                            .error(function () {
+                                newuser.type = "user";
+                                UserService
+                                    .register(newuser)
+                                    .success(function (newUser) {
+                                        var user = newUser;
+                                        $rootScope.currentUser = newUser;
+                                        $location.url("/user/" + newUser._id);
+                                    })
+                                    .error(function () {
+                                        vm.uerror = "User Registration Failed";
+                                    })
+                            });
+                    }
+                    else {
+                        vm.uerror = "Passowrds do not match";
+                        vm.user = "";
+                    }
+                } else {
+                    vm.uerror = "Enter Username";
                 }
-                else {
-                    vm.uerror = "Passowrds do not match";
-                    vm.user = "";
-                }
-            }else {
-                vm.uerror = "Enter Username";
+            }
+            else if(newuser.userrole == "Owner"){
+                console.log("As Owner");
             }
         }
 

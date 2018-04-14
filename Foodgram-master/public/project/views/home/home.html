@@ -1,4 +1,5 @@
-<!--<nav class="navbar navbar-default navbar-fixed-top nvc">
+
+<nav class="navbar navbar-default navbar-fixed-top nvc">
     <div class="container-fluid">
         <div class="dropdown pull-right hidden-xs hidden-sm">
             <a class="btn btn-info" type="button"
@@ -26,11 +27,13 @@
                 <li class="visible-xs visible-sm">
                     <a data-toggle="modal" data-target="#myModal" >Login</a>
                 </li>
+                <a ng-href="#/home/newrestaurant">NEW</a>
+
             </ul>
         </div>
-        &lt;!&ndash; /.navbar-collapse &ndash;&gt;
+        <!-- /.navbar-collapse -->
     </div>
-    &lt;!&ndash; /.container &ndash;&gt;
+    <!-- /.container -->
 </nav>
 
 
@@ -53,7 +56,7 @@
 
 
         </div>
-        &lt;!&ndash;show for small and x-small size screen&ndash;&gt;
+        <!--show for small and x-small size screen-->
         <div class="row  visible-sm visible-xs smsc">
 
             <div class="col-md-3 col-md-push-1 form-group">
@@ -222,170 +225,108 @@
                            class="form-control" placeholder="Confirm Password" required>
                     <span class="ngf" ng-if="form1.CPassword.$error.required">Re-enter your password</span>
                 </div>
-                <button type="submit" class="btn btn-success btn-block" ng-click="model.register(model.user)">Register</button>
+                    <div class="form-check">
+                        <input name="102" type="radio" id="radio106" ng-model="model.user.userrole" value = "User">
+                        <label for="radio106">User</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input name="102" type="radio" id="radio107" ng-model="model.user.userrole" value="Owner">
+                        <label for="radio107">Owner</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-success btn-block" ng-click="model.register(model.user)">Register</button>
                 </form>
             </div>
         </div>
     </div>
-</div>-->
-
-
-<div class="modal fade bs-example-modal-sm loginmodal" data-backdrop="false"
-     id="myNModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content mdlc">
-            <div class="modal-header">
-                <button type="button" class="close" ng-click="model.eraseData()"
-                        data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true" >&times;</span></button>
-                <h2 class="modal-title">Please login to continue</h2>
-                <div class="alert alert-dismissable alert-danger" ng-show="model.xerror">
-                    <button type="button" class="close" data-dismiss="alert">x</button>
-                    {{model.xerror}}
-                </div>
-            </div>
-            <div class="modal-body container-fluid">
-                <div class="form-group">
-                    <input type="text" ng-model="model.user.username"
-                           class="form-control" placeholder="Username">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control"
-                           ng-model="model.user.password" placeholder="Password">
-                </div>
-                <a class="btn btn-success btn-block" ng-click="model.login(model.user)">Login</a>
-                <a href="/api/auth/facebook" class="btn btn-primary btn-block">
-                    <span class="fa fa-facebook"></span>
-                    Facebook
-                </a>
-            </div>
-            <div class="modal-footer">
-                <a class="btn btn-info btn-block" href="#/home/guest/{{model.key}}/search">
-                    Continue as a guest</a>
-            </div>
-
-        </div>
-    </div>
 </div>
 
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--<style>-->
+        <!--* {-->
+            <!--box-sizing: border-box;-->
+        <!--}-->
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        .modal-backdrop {
-            background-color: rgba(0,0,0,.0001) !important;
-        }
-        #form-buscar >.form-group >.input-group > .form-control {
-            height: 40px;
-        }
-        #form-buscar >.form-group >.input-group > .input-group-btn > .btn{
-            height: 40px;
-            font-size: 16px;
-            font-weight: 300;
+        <!--body {-->
+            <!--margin: 0;-->
+            <!--font-family: Arial;-->
+            <!--font-size: 17px;-->
+        <!--}-->
 
+        <!--#myVideo {-->
+            <!--position: fixed;-->
+            <!--right: 0;-->
+            <!--bottom: 0;-->
+            <!--min-width: 100%;-->
+            <!--min-height: 100%;-->
+        <!--}-->
 
-        }
-        #form-buscar >.form-group >.input-group > .input-group-btn > .btn .glyphicon{
-            margin-right:12px;
-        }
+        <!--.content {-->
+            <!--position: fixed;-->
+            <!--bottom: 0;-->
+            <!--background: rgba(0, 0, 0, 0.5);-->
+            <!--color: #f1f1f1;-->
+            <!--width: 100%;-->
+            <!--padding: 20px;-->
+        <!--}-->
 
+        <!--#myBtn {-->
+            <!--width: 200px;-->
+            <!--font-size: 18px;-->
+            <!--padding: 10px;-->
+            <!--border: none;-->
+            <!--background: #000;-->
+            <!--color: #fff;-->
+            <!--cursor: pointer;-->
+        <!--}-->
 
-        #form-buscar >.form-group >.input-group > .form-control {
-            font-size: 16px;
-            font-weight: 300;
+        <!--#myBtn:hover {-->
+            <!--background: #ddd;-->
+            <!--color: black;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
 
-        }
+<!--<video autoplay muted loop id="myVideo">-->
+    <!--<source src="../../../vid.mp4" type="video/mp4">-->
+    <!--Your browser does not support HTML5 video.-->
+<!--</video>-->
 
-        #form-buscar >.form-group >.input-group > .form-control:focus {
-            border-color: #33A444;
-            outline: 0;
-            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 1px rgba(0, 109, 0, 0.8);
-            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 1px rgba(0, 109, 0, 0.8);
-        }
-        * {
-            box-sizing: border-box;
-        }
+<!--<div class="content">-->
+    <!--<h1>Heading</h1>-->
+    <!--<p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>-->
+    <!--<form class=" row visible-md visible-lg">-->
+    <!--<div class="col-md-3 col-md-push-1 form-group">-->
+    <!--<input class="form-control rename" id="city" ng-model="model.key"-->
+    <!--placeholder="Restaurant name">-->
+    <!--</input>-->
+    <!--</div>-->
+    <!--<div class="col-md-2 col-md-push-1 form-group">-->
+    <!--<button class="btn btn-danger btn-block scb"  data-toggle="modal" data-target="#myNModal"  type="submit"-->
+    <!--&gt;Search</button>-->
+    <!--</div>-->
+    <!--</form>-->
+<!--</div>-->
 
-        body {
-            margin: 0;
-            font-family: Arial;
-            font-size: 17px;
-        }
+<!--<script>-->
+    <!--var video = document.getElementById("myVideo");-->
+    <!--var btn = document.getElementById("myBtn");-->
 
-        #myVideo {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-        }
+    <!--function myFunction() {-->
+        <!--if (video.paused) {-->
+            <!--video.play();-->
+            <!--btn.innerHTML = "Pause";-->
+        <!--} else {-->
+            <!--video.pause();-->
+            <!--btn.innerHTML = "Play";-->
+        <!--}-->
+    <!--}-->
+<!--</script>-->
 
-        .content {
-            position: fixed;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            color: #f1f1f1;
-            width: 100%;
-            padding: 20px;
-        }
-
-        #myBtn {
-            width: 200px;
-            font-size: 18px;
-            padding: 10px;
-            border: none;
-            background: #000;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        #myBtn:hover {
-            background: #ddd;
-            color: black;
-        }
-        h1 {
-            font-family: 'Corben', Georgia, Times, serif;
-            font-size: 40px;
-            line-height: 55px;
-        }
-    </style>
-
-    <link href="https://fonts.googleapis.com/css?family=Corben" rel="stylesheet">
-</head>
-<body>
-<video autoplay muted loop id="myVideo">
-
-    <source src="../../../vid.mp4" type="video/mp4">
-
-    Your browser does not support HTML5 video.
-</video>
-
-
-
-<div class="content">
-    <h1>FoodGram</h1>
-    <input  id="1" class="form-control"
-           style="color:whitesmoke;background: rgba(0, 0, 0, 0.5);border-color: whitesmoke"
-           name="search" placeholder="Search for restaurant" required/>
-    <button class="btn btn-danger btn-block scb" data-toggle="modal" data-target="#myNModal">Submit</button>
-</div>
-
-<script>
-    var video = document.getElementById("myVideo");
-    var btn = document.getElementById("myBtn");
-
-    function myFunction() {
-        if (video.paused) {
-            video.play();
-            btn.innerHTML = "Pause";
-        } else {
-            video.pause();
-            btn.innerHTML = "Play";
-        }
-    }
-</script>
-
-</body>
-</html>
+<!--</body>-->
+<!--</html>-->

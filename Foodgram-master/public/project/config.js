@@ -14,6 +14,11 @@
                 controller: "HomeController",
                 controllerAs: "model"
             })
+            .when("/home/newrestaurant", {
+                templateUrl: "project/views/newrestaurant/newrestaurant.view.client.html",
+                controller: "NewRestaurantController",
+                controllerAs: "model"
+            })
             .when("/home/:uid",{
                 templateUrl: "project/views/home/result.view.client.html",
                 controller: "ResultController",

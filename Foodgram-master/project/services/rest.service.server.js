@@ -1,4 +1,3 @@
-
 module.exports = function (app, z) {
 
     var locapi = "https://maps.googleapis.com/maps/api/geocode/json?address=";
@@ -16,7 +15,6 @@ module.exports = function (app, z) {
         var name = obj.name;
         var lat = obj.lati;
         var lon = obj.lngi;
-
         z
             .search({
                 q: name,
@@ -24,24 +22,26 @@ module.exports = function (app, z) {
                 lon: lon
             })
             .then(function(data) {
-                res.send(data);
+                res.json(data);
             })
-                .catch(function(err) {
-                    res.send(err);
-                })
+            .catch(function(err) {
+                res.send(err);
+            });
     }
 
     function findPlaceByCity(req, res) {
         var obj = req.body;
         var city = obj.city;
         z
-            .search().then(function(data) {
-            res.send(data);
-        })
-            .catch(function(err) {
-                res.send(err);
+            .search()
+            .then(function(data) {
+                res.json(data);
             })
-}
+            .catch(function(err) {
+                res.json(err);
+            });
+    }
+
 
     function findAllCategories(req, res) {
         var loc = req.body;
@@ -49,34 +49,32 @@ module.exports = function (app, z) {
         var lon = loc.lngi;
         z
             .search({
-                    lat: lat,
-                    lon: lon,
-                    count: 9
-                })
-            .then(function(data) {
-                res.send(data);
+                lat: lat,
+                lon: lon,
+                count: 9
             })
-                .catch(function(err) {
-                    res.send(err);
-                })
+            .then(function(data) {
+                res.json(data);
+            })
+            .catch(function(err) {
+                res.send(err);
+            });
     }
 
-
-
     function findNearByPlaces(req, res) {
-        console.log(req.body)
         var loc = req.body;
         z
             .search({
                 lat: loc.latitude,
                 lon: loc.longitude,
                 start:1
-            }).then(function(data) {
+            })
+            .then(function(data) {
                 res.send(data);
             })
-                .catch(function(err) {
-                    res.send(err);
-                })
+            .catch(function(err) {
+                res.send(err);
+            });
     }
 
     function findRestaurantByID(req, res) {
@@ -86,10 +84,12 @@ module.exports = function (app, z) {
                 res_id: restId
             })
             .then(function(data) {
-                res.send(data);
+                res.json(data);
             })
-                .catch(function(err) {
-                    res.send(err);
-                })
+            .catch(function(err) {
+                res.send(err);
+            });
+
     }
-    };
+
+};

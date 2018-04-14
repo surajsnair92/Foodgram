@@ -74,6 +74,7 @@
                 RestService
                     .findPlaceByName(a)
                     .success(function (data) {
+                        console.log(data)
                         if(data.length == 0) {
                             vm.display = "Please enable location services";
                         }else {
