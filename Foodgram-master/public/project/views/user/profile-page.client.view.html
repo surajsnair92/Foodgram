@@ -1,0 +1,185 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="row container-fluid">
+        <div class="col-sm-4 hidden-xs">
+            <div class="navbar-header">
+                <a href="#/home/{{model.userID}}" class="navbar-brand">
+                    Search
+                </a>
+            </div>
+
+        </div>
+        <div class="col-sm-8">
+            <div class="navbar-text pull-left visible-xs">
+                <a href="#/user/{{model.userID}}/website">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+            </div>
+
+            <div class="navbar-text pull-right" >
+                <div class="dropdown pull-right dpdn">
+                        <button class="btn btn-danger btn-group-lg"
+                                href="#/home" ng-click="model.logout()" type="button">Logout</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid pgectr">
+<div class="container-fluid">
+    <div class="col-xs-4">
+        <img class="image profileimage" src="project/css/images/userimg.jpeg">
+    </div>
+
+    <div class="col-xs-8 profileinfo">
+
+        <h1>{{model.firstname}} {{model.lastname}} </h1>
+
+        <div class="form-group">
+            <label for="profile-username">Username</label>
+            <input class="form-control"
+                   ng-model="model.curuser.username"
+                   id="profile-username"
+                   value="akash"
+                   type="text"
+                   disabled/>
+        </div>
+
+        <div class="form-group">
+            <label for="profile-mail">Email</label>
+            <input class="form-control"
+                   ng-model="model.curuser.email"
+                   value="akashc@gmail.com"
+                   id="profile-mail"
+                   type="email"
+                   disabled/>
+        </div>
+
+
+        <div class="form-group">
+            <label for="profile-fname">First Name</label>
+            <input class="form-control"
+                   ng-model="model.curuser.firstname"
+                   id="profile-fname"
+                   value="Akash"
+                   type="text"
+                   disabled/>
+        </div>
+
+        <div class="form-group">
+            <label for="profile-lname">Last Name</label>
+            <input class="form-control"
+                   ng-model="model.curuser.lastname"
+                   id="profile-lname"
+                   value="C"
+                   type="text"
+                   disabled/>
+        </div>
+
+    </div>
+
+</div>
+    <div class="container msgpn">
+    <div class="col-xs-4">
+        <img data-toggle="modal" data-target="#myModal" class="img-circle profilebtns-3" src="project/css/images/msg.png" alt="Message"/>
+        <h2 class="profilebtns-1">Message</h2>
+    </div>
+
+    <div class="col-xs-4">
+        <img data-toggle="modal" data-target="#myRModal" class="img-rounded profilebtns" src="project/css/images/review.jpg" alt="Reviews"  />
+        <h2 class="profilebtns-2">Reviews</h2>
+    </div>
+    </div>
+<!--
+<div ng-repeat="sms in model.messages">
+    By : {{sms.from}}
+    Message : {{sms.message}}
+</div>
+-->
+
+
+
+</div>
+
+<div class="container">
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="reviewtitle">
+                        <h4 class="modal-title">Get in touch with {{model.uname}}</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <textarea id="reviewdes" ng-model="model.message.data"
+                                  placeholder="Type your message here" rows="3" cols="50"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-success sb"  data-dismiss="modal"
+                       ng-click="model.postmessage(model.message)">Send</a>
+                    <!--<button type="button" class="btn btn-primary form-control"
+                            ng-click="model.submit(model.review)" data-dismiss="modal">Submit</button>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container">
+    <div class="modal fade" id="myRModal" role="dialog" data-backdrop="false">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="reviewtitle">
+                        <h4 class="modal-title">Reviews</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="media" ng-repeat="review in model.reviews">
+                        <div class="media-left">
+                            <div>
+                                <div>
+                                    <img src="project/css/images/restaurants-default.jpg defres" alt="Food" class="img-rounded">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-body">
+                             <h4 class="media-heading"><a href="#/home/{{model.userID}}/res/{{review.placeID}}">{{review.place}}</a>
+                                <small><i>Posted on {{model.getDateFormat(review.date)|date:'MM-dd-yyyy'}}</i></small></h4>
+                            <p>{{review.description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-success sb" data-dismiss="modal"
+                    >Close</a>
+                    <!--<button type="button" class="btn btn-primary form-control"
+                            ng-click="model.submit(model.review)" data-dismiss="modal">Submit</button>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-text pull-right">
+            <a href="#/user/{{model.userID}}">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+        </div>
+    </div>
+</nav>

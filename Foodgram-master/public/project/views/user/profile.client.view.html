@@ -1,0 +1,162 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="dropdown pull-right hidden-xs hidden-sm">
+            <a ng-click="model.logout()" class="btn btn-danger" type="button" data-toggle="dropdown">Logout
+                </a></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#/home/{{model.userID}}">Search</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="visible-xs visible-sm" role="presentation">
+                    <a href="#/user/{{model.userID}}/reviews">My Reviews</a>
+                </li>
+                <li class="visible-xs visible-sm">
+                    <a href="#/user/{{model.userID}}/messages">My Messages</a>
+                </li>
+                <li class="visible-xs visible-sm">
+                    <a data-toggle="modal" data-target="#myModal">Delete user</a>
+                </li>
+                <li class="visible-xs visible-sm">
+                    <a ng-click="model.logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+<div class="col-md-2 col-lg-2 ln-navbar">
+        <ul class="nav nav-pills nav-stacked hidden-xs hidden-sm">
+            <li><a ng-if="model.user.type == model.admin" href="#/user/{{model.userID}}/administration">Manage users</a></li>
+            <li><a href="#/user/{{model.userID}}/reviews">My Reviews</a></li>
+            <li><a href="#/user/{{model.userID}}/messages">My Messages</a></li>
+            <li><a data-toggle="modal" data-target="#myModal">Delete account</a></li>
+        </ul>
+    </div>
+
+<div class="container-fluid col-md-10">
+    <div class="col-sm-4 ">
+        <img class="image profileeditimage" src="project/css/images/userimg.jpeg">
+
+        <!--<div class="uploadbtn">
+            <input type="file">
+            <button class="btn btn-primary form-control">Upload</button>
+        </div>-->
+    </div>
+    <!--
+        <div ng-show="model.error" class="alert alert-danger">
+            {{model.error}}
+        </div>
+
+        <div ng-show="model.message" class="alert alert-success">
+            {{model.message}}
+        </div>
+    -->
+
+    <div class="col-sm-8 profileedit">
+
+        <h1></h1>
+
+        <div class="form-group">
+            <label for="profile-username">Username</label>
+            <input class="form-control"
+                   ng-model="model.user.username"
+                   id="profile-username"
+                   value="akash"
+                   type="text"
+                   disabled
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="profile-mail">Email</label>
+            <input class="form-control"
+                   ng-model="model.user.email"
+                   value="akashc@gmail.com"
+                   id="profile-mail"
+                   type="email"
+            />
+        </div>
+
+
+        <div class="form-group">
+            <label for="profile-fname">First Name</label>
+            <input class="form-control"
+                   ng-model="model.user.firstname"
+                   id="profile-fname"
+                   value="Akash"
+                   type="text"
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="profile-lname">Last Name</label>
+            <input class="form-control"
+                   ng-model="model.user.lastname"
+                   id="profile-lname"
+                   value="C"
+                   type="text"
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="profile-phone">Phone</label>
+            <input class="form-control"
+                   ng-model="model.user.phone"
+                   id="profile-phone"
+                   value="C"
+                   type="text"
+            />
+        </div>
+    </div>
+    <div class="btm">
+        <button class="btn btn-success btn-block" ng-click="model.update(model.user)">Update</button>
+    </div>
+    <div ng-show="model.error" class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        {{model.error}}
+    </div>
+
+    <div ng-show="model.message" class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        {{model.message}}
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="modal fade" id="myModal" role="dialog" data-backdrop="false">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="reviewtitle">
+                        <h4 class="modal-title">Are you sure?</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <button id="reviewdes" class="btn btn-danger btn-block"
+                                  ng-click="model.deleteUser()">Confirm delete</button>
+                        <button class="btn btn-success btn-block" data-dismiss="modal"
+                        >Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+

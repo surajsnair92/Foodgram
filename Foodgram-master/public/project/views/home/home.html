@@ -1,0 +1,319 @@
+<nav class="navbar navbar-default navbar-fixed-top nvc">
+    <div class="container-fluid">
+        <div class="dropdown pull-right hidden-xs hidden-sm">
+            <a class="btn btn-info" type="button"
+               data-toggle="modal" data-target="#regModal">Register
+            </a>
+            <a class="btn btn-success" type="button"
+               data-toggle="modal" data-target="#myModal">Login
+            </a>
+        </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle"
+                    data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand">ReviewME</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="visible-xs visible-sm" role="presentation">
+                    <a data-toggle="modal" data-target="#regModal">Register</a>
+                </li>
+                <li class="visible-xs visible-sm">
+                    <a data-toggle="modal" data-target="#myModal" >Login</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+<img src="project/css/images/pexels-photo-70497.jpeg" width="100%" class="hmepic">
+<div class="container-fluid home">
+    <div class="row bow">
+        <div class="gt">
+            <form class=" row visible-md visible-lg">
+                <div class="col-md-3 col-md-push-1 form-group">
+                    <input class="form-control rename" id="city" ng-model="model.key"
+                           placeholder="Restaurant name">
+                    </input>
+                </div>
+                <div class="col-md-2 col-md-push-1 form-group">
+                    <button class="btn btn-danger btn-block scb"  data-toggle="modal" data-target="#myNModal"
+                            type="submit"
+                            >Search</button>
+                </div>
+            </form>
+
+
+        </div>
+        <!--show for small and x-small size screen-->
+        <div class="row  visible-sm visible-xs smsc">
+
+            <div class="col-md-3 col-md-push-1 form-group">
+                <input ng-model="model.key"  class="form-control key" placeholder="Restaurant name">
+                </input>
+            </div>
+            <div class="col-md-2 col-md-push-1 form-group">
+                <a class="btn btn-success" data-toggle="modal" data-target="#myNModal">Search</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <h1>{{model.tosay}}</h1>
+        <div class="container-fluid res">
+            <div class="alert alert-dismissable alert-danger" ng-show="model.uerror">
+                {{model.display}}
+            </div>
+            <div class="media respg"
+                 ng-repeat="review in model.cats ">
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                    <div >
+                        <a href="#/home/guest/search/{{review.R.res_id}}">
+                            <div>
+                                <div ng-if="review.featured_image.length !== 0">
+                                    <img ng-src="{{review.featured_image}}" alt="Food" class="img-rounded" width="304" height="236">
+                                </div>
+                                <div ng-if="review.featured_image.length == 0">
+                                    <img src="project/css/images/restaurants-default.jpg" alt="Food" class="img-rounded" width="304" height="236">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <h3>{{review.name}}</h3>
+                        <h5>{{review.location.locality}}, {{review.location.city}}</h5>
+                        <h5><b>Cuisines :</b> {{review.cuisines}}</h5>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" data-backdrop="false"
+     id="myNModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content mdlc">
+            <div class="modal-header">
+                <button type="button" class="close" ng-click="model.eraseData()"
+                        data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" >&times;</span></button>
+                <h2 class="modal-title">Please login to continue</h2>
+                <div class="alert alert-dismissable alert-danger" ng-show="model.xerror">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    {{model.xerror}}
+                </div>
+            </div>
+            <div class="modal-body container-fluid">
+                <div class="form-group">
+                    <input type="text" ng-model="model.user.username"
+                           class="form-control" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control"
+                           ng-model="model.user.password" placeholder="Password">
+                </div>
+                <a class="btn btn-success btn-block" ng-click="model.login(model.user)">Login</a>
+                <a href="/api/auth/facebook" class="btn btn-primary btn-block">
+                    <span class="fa fa-facebook"></span>
+                    Facebook
+                </a>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-info btn-block" href="#/home/guest/{{model.key}}/search">
+                    Continue as a guest</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade bs-example-modal-sm" data-backdrop="false"
+     id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content mdlc">
+            <div class="modal-header">
+                <button type="button" ng-click="model.eraseData()"
+                        class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h2 class="modal-title" id="myModalLabel">Login to your account</h2>
+                <div class="alert alert-dismissable alert-danger" ng-show="model.xerror">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    {{model.xerror}}
+                </div>
+            </div>
+            <div class="modal-body container-fluid">
+                <div class="form-group">
+                    <input type="text" ng-model="model.user.username"
+                           class="form-control" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control"
+                           ng-model="model.user.password" placeholder="Password">
+                </div>
+                <a class="btn btn-success btn-block" ng-click="model.login(model.user)">Login</a>
+                <a href="/api/auth/facebook" class="btn btn-primary btn-block">
+                    <span class="fa fa-facebook"></span>
+                    Facebook
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" data-backdrop="false"
+     id="regModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content mdlc">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        ng-click="model.eraseData()" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title mdlt" id="regModalLabel">Not a member yet?</h3>
+                <div class="alert alert-dismissable alert-danger" ng-show="model.uerror">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    {{model.uerror}}
+                </div>
+            </div>
+            <div class="modal-body container-fluid">
+                <form name="form1">
+                <div class="form-group">
+                    <input type="text" ng-model="model.user.username" name="username"
+                           class="form-control" placeholder="Username" required/>
+                    <span class="ngf" ng-if="form1.username.$error.required">Username is required</span>
+                </div>
+                <div class="form-group">
+                    <input type="text" ng-model="model.user.firstname"
+                           class="form-control" placeholder="Firstname" >
+                </div>
+                <div class="form-group">
+                    <input type="text" ng-model="model.user.lastname"
+                           class="form-control" placeholder="Lastname" >
+                </div>
+                <div class="form-group">
+                    <input type="email" ng-model="model.user.email"
+                           class="form-control" placeholder="Email" >
+                </div>
+                <div class="form-group">
+                    <input type="tel" ng-model="model.user.phone"
+                           class="form-control" placeholder="Phone number" >
+                </div>
+                <div class="form-group">
+                    <input type="password" ng-model="model.user.password" name="Password"
+                           class="form-control" placeholder="Password" required>
+                    <span class="ngf" ng-if="form1.Password.$error.required">Password is required</span>
+                </div>
+                <div class="form-group">
+                    <input type="password" ng-model="model.user.cpassword" name="CPassword"
+                           class="form-control" placeholder="Confirm Password" required>
+                    <span class="ngf" ng-if="form1.CPassword.$error.required">Re-enter your password</span>
+                </div>
+                <button type="submit" class="btn btn-success btn-block" ng-click="model.register(model.user)">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--<style>-->
+        <!--* {-->
+            <!--box-sizing: border-box;-->
+        <!--}-->
+
+        <!--body {-->
+            <!--margin: 0;-->
+            <!--font-family: Arial;-->
+            <!--font-size: 17px;-->
+        <!--}-->
+
+        <!--#myVideo {-->
+            <!--position: fixed;-->
+            <!--right: 0;-->
+            <!--bottom: 0;-->
+            <!--min-width: 100%;-->
+            <!--min-height: 100%;-->
+        <!--}-->
+
+        <!--.content {-->
+            <!--position: fixed;-->
+            <!--bottom: 0;-->
+            <!--background: rgba(0, 0, 0, 0.5);-->
+            <!--color: #f1f1f1;-->
+            <!--width: 100%;-->
+            <!--padding: 20px;-->
+        <!--}-->
+
+        <!--#myBtn {-->
+            <!--width: 200px;-->
+            <!--font-size: 18px;-->
+            <!--padding: 10px;-->
+            <!--border: none;-->
+            <!--background: #000;-->
+            <!--color: #fff;-->
+            <!--cursor: pointer;-->
+        <!--}-->
+
+        <!--#myBtn:hover {-->
+            <!--background: #ddd;-->
+            <!--color: black;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<video autoplay muted loop id="myVideo">-->
+    <!--<source src="../../../vid.mp4" type="video/mp4">-->
+    <!--Your browser does not support HTML5 video.-->
+<!--</video>-->
+
+<!--<div class="content">-->
+    <!--<h1>Heading</h1>-->
+    <!--<p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>-->
+    <!--<form class=" row visible-md visible-lg">-->
+    <!--<div class="col-md-3 col-md-push-1 form-group">-->
+    <!--<input class="form-control rename" id="city" ng-model="model.key"-->
+    <!--placeholder="Restaurant name">-->
+    <!--</input>-->
+    <!--</div>-->
+    <!--<div class="col-md-2 col-md-push-1 form-group">-->
+    <!--<button class="btn btn-danger btn-block scb"  data-toggle="modal" data-target="#myNModal"  type="submit"-->
+    <!--&gt;Search</button>-->
+    <!--</div>-->
+    <!--</form>-->
+<!--</div>-->
+
+<!--<script>-->
+    <!--var video = document.getElementById("myVideo");-->
+    <!--var btn = document.getElementById("myBtn");-->
+
+    <!--function myFunction() {-->
+        <!--if (video.paused) {-->
+            <!--video.play();-->
+            <!--btn.innerHTML = "Pause";-->
+        <!--} else {-->
+            <!--video.pause();-->
+            <!--btn.innerHTML = "Play";-->
+        <!--}-->
+    <!--}-->
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->

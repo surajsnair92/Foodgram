@@ -1,0 +1,95 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="dropdown pull-right hidden-xs hidden-sm">
+            <a ng-click="model.logout()" class="btn btn-danger" type="button" data-toggle="dropdown">Logout
+            </a></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#/home">Search</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="visible-xs visible-sm" role="presentation">
+                    <a ng-if="model.user.type == model.admin" href="#/user/{{model.userID}}/administration">Manage users</a>
+                </li>
+                <li class="visible-xs visible-sm" role="presentation">
+                    <a href="#/user/{{model.userID}}">My Profile</a>
+                </li>
+                <li class="visible-xs visible-sm">
+                    <a href="#/user/{{model.userID}}/messages">My Messages</a>
+                </li>
+                <li class="visible-xs visible-sm">
+                    <a ng-click="model.logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+<div class="col-md-2 col-lg-2 ln-navbar">
+    <ul class="nav nav-pills nav-stacked hidden-xs hidden-sm">
+        <li><a ng-if="model.user.type == model.admin" href="#/user/{{model.userID}}/administration">Manage users</a></li>
+        <li><a href="#/user/{{model.userID}}">My Profile</a></li>
+        <li><a href="#/user/{{model.userID}}/reviews">My Reviews</a></li>
+        <li><a href="#/user/{{model.userID}}/messages">My Messages</a></li>
+    </ul>
+</div>
+
+<div class="container-fluid col-md-10">
+
+
+    <div class="review-edit">
+
+        <div class="form-group">
+            <label for="page-edit-page-name">Place</label>
+            <input class="form-control"
+                   ng-model="model.review.place"
+                   id="page-edit-page-name"
+                   value="Blog Post"
+                   type="text"
+                   disabled
+                   />
+        </div>
+
+        <div class="form-group">
+            <label for="page-edit-page-title">Description</label>
+            <textarea class="form-control"
+                   ng-model="model.review.description"
+                   placeholder="Page Title"
+                   id="page-edit-page-title" rows="5"></textarea>
+        </div>
+
+        <div class="form-group">
+            <a class="btn btn-primary btn-block" ng-click="model.editreview(model.review)">
+                Update review
+            </a>
+        </div>
+
+        <div class="form-group btmbtn">
+            <a class="btn btn-danger btn-block" ng-click="model.deleteReview()">
+                Delete review
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-text pull-right">
+            <a href="#/user/{{model.userID}}">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+        </div>
+    </div>
+</nav>

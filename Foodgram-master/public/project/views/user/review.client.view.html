@@ -1,0 +1,127 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="dropdown pull-right hidden-xs hidden-sm">
+            <a ng-click="model.logout()" class="btn btn-danger" type="button" data-toggle="dropdown">Logout
+            </a></div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#/home/{{model.userID}}">Search</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="visible-xs visible-sm" role="presentation">
+                    <a ng-if="model.user.type == model.admin" href="#/user/{{model.userID}}/administration">Manage users</a>
+                </li>
+                <li class="visible-xs visible-sm" role="presentation">
+                    <a href="#/user/{{model.userID}}">My Profile</a>
+                </li>
+                <li class="visible-xs visible-sm">
+                    <a href="#/user/{{model.userID}}/messages">My Messages</a>
+                </li>
+                <li class="visible-xs visible-sm">
+                    <a ng-click="model.logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+<div class="col-md-2 col-lg-2 ln-navbar">
+    <ul class="nav nav-pills nav-stacked hidden-xs hidden-sm">
+        <li><a ng-if="model.user.type == model.admin" href="#/user/{{model.userID}}/administration">Manage users</a></li>
+        <li><a href="#/user/{{model.userID}}">My Profile</a></li>
+        <li><a href="#/user/{{model.userID}}/messages">My Messages</a></li>
+    </ul>
+</div>
+
+
+
+<!--<div class="container-fluid col-md-10">
+    <div  class="search">
+        Search: <input  class="form-control" ng-model="model.query" />
+        <div class="new-btn">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Write a review</button>
+        </div>
+    </div>-->
+
+<div class="container-fluid revlist col-md-10">
+    <div class="media" ng-repeat="review in model.reviews | filter: model.query | orderBy: '-date'">
+        <div class="col-xs-4 pull-right">
+            <a class="btn btn-danger hidden-xs" href="#/user/{{model.userID}}/reviews/{{review._id}}">View</a>
+            <button class="btn btn-primary hidden-xs" ng-click="model.deleteReview(review._id)">Delete</button>
+            <a class="visible-xs" href="#/user/{{model.userID}}/reviews/{{review._id}}"><span class="glyphicon glyphicon-edit"></span> </a>
+            <a class="visible-xs" ng-click="model.deleteReview(review._id)"><span class="glyphicon glyphicon-remove"></span> </a>
+        </div>
+        <div class="media-left">
+            <img src="project/css/images/restaurants-default.jpg" class="media-object defres">
+        </div>
+        <div class="media-body hidden-xs">
+            <h4 class="media-heading"><a href="#/home/{{model.userID}}/res/{{review.placeID}}">{{review.place}}</a>
+                <small ><i>Posted on {{model.getDateFormat(review.date)|date:'MM-dd-yyyy'}}</i></small></h4>
+            <div >
+                <p>{{review.description}}</p>
+        </div>
+        </div>
+        <div class="media-body visible-xs" >
+            <h4 class="media-heading"><a href="#/home/{{model.userID}}/res/{{review.placeID}}">{{review.place}}</a></h4>
+                <div >
+                    {{review.description}}
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="container">
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="reviewtitle">
+                        <h4 class="modal-title">Help us serve you better</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group required">
+                        <label for="reviewtarget">Whom would you like to review?</label>
+                        <input id="reviewtarget" type="text" ng-model="model.review.place">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="reviewdes" ng-model="model.review.description"
+                                  placeholder="Description" rows="10" cols="50"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary form-control"
+                            ng-click="model.submit(model.review)" data-dismiss="modal">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-text pull-right">
+            <a href="#/user/{{model.userID}}">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+        </div>
+    </div>
+</nav>
