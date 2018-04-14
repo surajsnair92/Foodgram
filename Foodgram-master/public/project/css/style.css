@@ -39,9 +39,11 @@
     color: red;
 }
 .scb{
+    color: black;
     width: 100px;
-    margin-left: 450px
+    margin-left: 120px
 }
+
 .key{
     width: 200px
 }
