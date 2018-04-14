@@ -46,10 +46,11 @@
                     RestService
                         .findAllCategories(a)
                         .success(function (data) {
+                            console.log(data)
                             if (data.length == 0) {
                                 vm.display = "Please enable location services";
                             } else {
-                                vm.cats = data;
+                                vm.cats = data.restaurants;
                                 vm.pic = vm.cats.featured_image;
                             }
                         });

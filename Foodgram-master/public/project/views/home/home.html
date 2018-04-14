@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top nvc">
+<!--<nav class="navbar navbar-default navbar-fixed-top nvc">
     <div class="container-fluid">
         <div class="dropdown pull-right hidden-xs hidden-sm">
             <a class="btn btn-info" type="button"
@@ -28,9 +28,9 @@
                 </li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
+        &lt;!&ndash; /.navbar-collapse &ndash;&gt;
     </div>
-    <!-- /.container -->
+    &lt;!&ndash; /.container &ndash;&gt;
 </nav>
 
 
@@ -53,7 +53,7 @@
 
 
         </div>
-        <!--show for small and x-small size screen-->
+        &lt;!&ndash;show for small and x-small size screen&ndash;&gt;
         <div class="row  visible-sm visible-xs smsc">
 
             <div class="col-md-3 col-md-push-1 form-group">
@@ -227,93 +227,131 @@
             </div>
         </div>
     </div>
+</div>-->
+
+<div class="modal fade bs-example-modal-sm" data-backdrop="false"
+     id="myNModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content mdlc">
+            <div class="modal-header">
+                <button type="button" class="close" ng-click="model.eraseData()"
+                        data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" >&times;</span></button>
+                <h2 class="modal-title">Please login to continue</h2>
+                <div class="alert alert-dismissable alert-danger" ng-show="model.xerror">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    {{model.xerror}}
+                </div>
+            </div>
+            <div class="modal-body container-fluid">
+                <div class="form-group">
+                    <input type="text" ng-model="model.user.username"
+                           class="form-control" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control"
+                           ng-model="model.user.password" placeholder="Password">
+                </div>
+                <a class="btn btn-success btn-block" ng-click="model.login(model.user)">Login</a>
+                <a href="/api/auth/facebook" class="btn btn-primary btn-block">
+                    <span class="fa fa-facebook"></span>
+                    Facebook
+                </a>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-info btn-block" href="#/home/guest/{{model.key}}/search">
+                    Continue as a guest</a>
+            </div>
+        </div>
+    </div>
 </div>
 
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--<head>-->
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-    <!--<style>-->
-        <!--* {-->
-            <!--box-sizing: border-box;-->
-        <!--}-->
 
-        <!--body {-->
-            <!--margin: 0;-->
-            <!--font-family: Arial;-->
-            <!--font-size: 17px;-->
-        <!--}-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-        <!--#myVideo {-->
-            <!--position: fixed;-->
-            <!--right: 0;-->
-            <!--bottom: 0;-->
-            <!--min-width: 100%;-->
-            <!--min-height: 100%;-->
-        <!--}-->
+        body {
+            margin: 0;
+            font-family: Arial;
+            font-size: 17px;
+        }
 
-        <!--.content {-->
-            <!--position: fixed;-->
-            <!--bottom: 0;-->
-            <!--background: rgba(0, 0, 0, 0.5);-->
-            <!--color: #f1f1f1;-->
-            <!--width: 100%;-->
-            <!--padding: 20px;-->
-        <!--}-->
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
 
-        <!--#myBtn {-->
-            <!--width: 200px;-->
-            <!--font-size: 18px;-->
-            <!--padding: 10px;-->
-            <!--border: none;-->
-            <!--background: #000;-->
-            <!--color: #fff;-->
-            <!--cursor: pointer;-->
-        <!--}-->
+        .content {
+            position: fixed;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
 
-        <!--#myBtn:hover {-->
-            <!--background: #ddd;-->
-            <!--color: black;-->
-        <!--}-->
-    <!--</style>-->
-<!--</head>-->
-<!--<body>-->
+        #myBtn {
+            width: 200px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+        }
 
-<!--<video autoplay muted loop id="myVideo">-->
-    <!--<source src="../../../vid.mp4" type="video/mp4">-->
-    <!--Your browser does not support HTML5 video.-->
-<!--</video>-->
+        #myBtn:hover {
+            background: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
 
-<!--<div class="content">-->
-    <!--<h1>Heading</h1>-->
-    <!--<p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>-->
-    <!--<form class=" row visible-md visible-lg">-->
-    <!--<div class="col-md-3 col-md-push-1 form-group">-->
-    <!--<input class="form-control rename" id="city" ng-model="model.key"-->
-    <!--placeholder="Restaurant name">-->
-    <!--</input>-->
-    <!--</div>-->
-    <!--<div class="col-md-2 col-md-push-1 form-group">-->
-    <!--<button class="btn btn-danger btn-block scb"  data-toggle="modal" data-target="#myNModal"  type="submit"-->
-    <!--&gt;Search</button>-->
-    <!--</div>-->
-    <!--</form>-->
-<!--</div>-->
+<video autoplay muted loop id="myVideo">
+    <source src="../../../vid.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
 
-<!--<script>-->
-    <!--var video = document.getElementById("myVideo");-->
-    <!--var btn = document.getElementById("myBtn");-->
+<div class="content">
+    <h1>Heading</h1>
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+    <form class=" row visible-md visible-lg">
+    <div class="col-md-3 col-md-push-1 form-group">
+    <input class="form-control rename" id="city" ng-model="model.key"
+    placeholder="Restaurant name">
+    </input>
+    </div>
+    <div class="col-md-2 col-md-push-1 form-group">
+    <button class="btn btn-danger btn-block scb"  data-toggle="modal" data-target="#myNModal"  type="submit"
+    &gt;Search</button>
+    </div>
+    </form>
+</div>
 
-    <!--function myFunction() {-->
-        <!--if (video.paused) {-->
-            <!--video.play();-->
-            <!--btn.innerHTML = "Pause";-->
-        <!--} else {-->
-            <!--video.pause();-->
-            <!--btn.innerHTML = "Play";-->
-        <!--}-->
-    <!--}-->
-<!--</script>-->
+<script>
+    var video = document.getElementById("myVideo");
+    var btn = document.getElementById("myBtn");
 
-<!--</body>-->
-<!--</html>-->
+    function myFunction() {
+        if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+        } else {
+            video.pause();
+            btn.innerHTML = "Play";
+        }
+    }
+</script>
+
+</body>
+</html>

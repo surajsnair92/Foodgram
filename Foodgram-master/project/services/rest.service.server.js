@@ -22,31 +22,26 @@ module.exports = function (app, z) {
                 q: name,
                 lat: lat,
                 lon: lon
-            },
-        function (err, result) {
-            if (!err) {
-                console.log(result);
-                res.json(result)
-            } else {
-                console.log(err);
-            }
-        });
+            })
+            .then(function(data) {
+                res.send(data);
+            })
+                .catch(function(err) {
+                    res.send(err);
+                })
     }
 
     function findPlaceByCity(req, res) {
         var obj = req.body;
         var city = obj.city;
         z
-            .search(),
-        function (err, result) {
-            if (!err) {
-                res.json(result);
-            } else {
-                console.log(err);
-            }
-        };
-    }
-
+            .search().then(function(data) {
+            res.send(data);
+        })
+            .catch(function(err) {
+                res.send(err);
+            })
+}
 
     function findAllCategories(req, res) {
         var loc = req.body;
@@ -57,34 +52,31 @@ module.exports = function (app, z) {
                     lat: lat,
                     lon: lon,
                     count: 9
-                },
-                function (err, result) {
-                    if (!err) {
-                        res.json(result);
-                    } else {
-                        console.log(err);
-                    }
-                });
+                })
+            .then(function(data) {
+                res.send(data);
+            })
+                .catch(function(err) {
+                    res.send(err);
+                })
     }
 
 
 
-
     function findNearByPlaces(req, res) {
+        console.log(req.body)
         var loc = req.body;
         z
             .search({
                 lat: loc.latitude,
                 lon: loc.longitude,
                 start:1
-            },
-        function (err, result) {
-            if (!err) {
-                res.json(result);
-            } else {
-                console.log(err);
-            }
-        });
+            }).then(function(data) {
+                res.send(data);
+            })
+                .catch(function(err) {
+                    res.send(err);
+                })
     }
 
     function findRestaurantByID(req, res) {
@@ -92,13 +84,12 @@ module.exports = function (app, z) {
         z
             .restaurant({
                 res_id: restId
-            },function (err, result) {
-                if (!err) {
-                    res.json(result);
-                } else {
-                    console.log(err);
-                }
-            });
+            })
+            .then(function(data) {
+                res.send(data);
+            })
+                .catch(function(err) {
+                    res.send(err);
+                })
     }
-
     };

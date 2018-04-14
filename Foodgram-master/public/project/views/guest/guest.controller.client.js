@@ -55,7 +55,7 @@
                     RestService
                         .findPlaceByName(obj)
                         .success(function (data) {
-                            vm.places = data;
+                            vm.places = data.restaurants;
                             $location.url("/home/guest/"+word+ "/search");
                         })
             })
@@ -78,7 +78,7 @@
                             vm.display = "Please enable location services";
                         }else {
 
-                            vm.places = data;
+                            vm.places = data.restaurants;
                             vm.pic = vm.places.featured_image;
                         }
                     });
