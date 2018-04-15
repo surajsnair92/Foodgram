@@ -25,11 +25,12 @@ module.exports = function (app, z, IPinfo) {
     var usermodel = require("./model/user/user.model.server")(mongoose);
     var reviewmodel = require("./model/review/review.model.server")(mongoose);
     var messagemodel = require("./model/messages/message.model.server")(mongoose);
+    var RestaurantModel = require("./model/restaurant/restaurant.model.server")(mongoose);
 
     require("./services/user.service.server.js")(app, usermodel, z, IPinfo);
     require("./services/review.service.server.js")(app, reviewmodel);
     require("./services/message.service.server")(app, messagemodel);
-    require("./services/rest.service.server")(app, z);
+    require("./services/rest.service.server")(app, z, RestaurantModel);
 
     /*var model = require('./model/models.server')(mongoose);
 

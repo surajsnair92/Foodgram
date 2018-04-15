@@ -1,14 +1,14 @@
-module.exports = function (app, z) {
+module.exports = function (app, z, RestaurantModel) {
 
-    var locapi = "https://maps.googleapis.com/maps/api/geocode/json?address=";
-    var location = "Boston,+MA";
-    var key =  "&key=AIzaSyC89pv2EHlwGL9eio5DFM_FMRIhoLz9s8Q";
+    // var locapi = "https://maps.googleapis.com/maps/api/geocode/json?address=";
+    // var location = "Boston,+MA";
+    // var key =  "&key=AIzaSyC89pv2EHlwGL9eio5DFM_FMRIhoLz9s8Q";
+    app.post("/api/rest/create", createRestaurant);
     app.post("/api/rest/categories/near/", findAllCategories);
     app.get("/api/rest/:restId", findRestaurantByID);
     app.post("/api/rest/places/near/", findNearByPlaces);
     app.post("/api/rest/place/name", findPlaceByName);
     app.post("/api/rest/place/city", findPlaceByCity);
-
 
     function findPlaceByName(req, res) {
         var obj = req.body;
@@ -22,6 +22,11 @@ module.exports = function (app, z) {
                 lon: lon
             })
             .then(function(data) {
+                data.restaurants.push({
+                    featured_image: '',
+                    test:'test'
+                });
+                console.log(data)
                 res.json(data);
             })
             .catch(function(err) {
@@ -90,6 +95,17 @@ module.exports = function (app, z) {
                 res.send(err);
             });
 
+    }
+
+    function createRestaurant(req,res){
+        var newRestaurant = req.body;
+
+        RestaurantModel.createRestaurant(newRestaurant)
+            .then(function (restaurant) {
+                res.json(restaurant);
+            }, function (err) {
+                res.sendStatus(500).send(err);
+            });
     }
 
 };

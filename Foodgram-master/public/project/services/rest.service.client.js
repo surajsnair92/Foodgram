@@ -6,6 +6,7 @@
     function RestService($http) {
 
         var api ={
+            "createRestaurant" : createRestaurant,
             "findAllCategories" : findAllCategories,
             "findRestaurantByID" : findRestaurantByID,
             "findNearByPlaces" : findNearByPlaces,
@@ -14,6 +15,10 @@
         };
         return api;
 
+        function createRestaurant(restaurant) {
+
+            return $http.post("/api/rest/create", restaurant)
+        }
         function findAllCategories(a) {
             return $http.post("/api/rest/categories/near/", a);
         }
