@@ -31,7 +31,6 @@
                     // console.log(res.data.results[0].geometry.location)
 
                 });
-            console.log("THata",restaurant);
             return $http.post("/api/rest/create", restaurant)
         }
         function findAllCategories(a) {

@@ -13,7 +13,7 @@
             RestService.createRestaurant(restaurant)
                 .then(
                     function (restaurant) {
-                        console.log(restaurant);
+                        $location.url('project/views/home/home.html')
                     }
                 )
 
