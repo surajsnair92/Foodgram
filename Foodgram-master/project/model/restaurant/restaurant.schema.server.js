@@ -9,7 +9,7 @@ module.exports = function (mongoose) {
         has_table_booking:Number,
         featured_image: String,
         cuisines: String,
-        location: { address: String, city: String, zipcode:Number, latitude:Number, longitude:Number }
+        location: { address: String, city: String, latitude:Number, longitude:Number}
     }, {collection: 'myRestaurants'});
 
     return RestaurantSchema;

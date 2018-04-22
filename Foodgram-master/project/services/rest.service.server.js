@@ -20,7 +20,7 @@ module.exports = function (app, z, RestaurantModel) {
             .findRestaurantByName(name)
             .then(function (data) {
                 myRes = data;
-                // console.log("JAiiiii:",myRes)
+                console.log("JAiiiii:",myRes)
 
             });
             // .catch(function(err) {
@@ -41,6 +41,11 @@ module.exports = function (app, z, RestaurantModel) {
                 //     console.log("JAiiiii:",obj._id)
                 //     // data.restaurants.add(myRes)
                 // }
+                if(myRes.length === 0){
+                    res.json(data);
+                    return;
+                }
+
                 data.restaurants.push({
                     apiKey: '167c084567684c2076a14d3c0b36bc29',
                     id: myRes[0]._id,
@@ -49,9 +54,13 @@ module.exports = function (app, z, RestaurantModel) {
                     price_range: myRes[0].price_range,
                     has_online_delivery: myRes[0].has_online_delivery,
                     has_table_booking: myRes[0].has_table_booking,
-                    cuisines: myRes[0].cuisines
+                    cuisines: myRes[0].cuisines,
+                    location:{
+                        latitude: myRes[0].location.latitude,
+                        longitude: myRes[0].location.longitude
+                    }
                 });
-                console.log(data);
+                console.log("mama",data);
                 res.json(data);
             })
             .catch(function(err) {
@@ -124,6 +133,7 @@ module.exports = function (app, z, RestaurantModel) {
 
     function createRestaurant(req,res){
         var newRestaurant = req.body;
+        console.log(newRestaurant);
 
         RestaurantModel.createRestaurant(newRestaurant)
             .then(function (restaurant) {
