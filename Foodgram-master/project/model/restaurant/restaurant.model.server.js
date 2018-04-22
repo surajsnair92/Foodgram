@@ -14,7 +14,7 @@ module.exports = function (mongoose, q) {
     return api;
 
     function createRestaurant(restaurant) {
-        console.log(restaurant)
+        // console.log(restaurant)
         return RestaurantModel.create(restaurant)
     }
 

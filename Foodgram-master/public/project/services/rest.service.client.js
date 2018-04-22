@@ -34,7 +34,7 @@
         }
 
         function findPlaceByName(name) {
-            console.log(name);
+            // console.log(name);
             return $http.post("/api/rest/place/name",name);
         }
 

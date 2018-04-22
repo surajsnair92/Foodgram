@@ -74,11 +74,11 @@
                 RestService
                     .findPlaceByName(a)
                     .success(function (data) {
-                        console.log(data)
+                        // console.log(data.restaurants)
                         if(data.length == 0) {
                             vm.display = "Please enable location services";
                         }else {
-
+                            console.log(data);
                             vm.places = data.restaurants;
                             vm.pic = vm.places.featured_image;
                         }

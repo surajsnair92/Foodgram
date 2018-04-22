@@ -15,6 +15,17 @@ module.exports = function (app, z, RestaurantModel) {
         var name = obj.name;
         var lat = obj.lati;
         var lon = obj.lngi;
+        var myRes;
+        RestaurantModel
+            .findRestaurantByName(name)
+            .then(function (data) {
+                myRes = data;
+                // console.log("JAiiiii:",myRes)
+
+            });
+            // .catch(function(err) {
+            //     res.send(err);
+            // });
         z
             .search({
                 q: name,
@@ -22,11 +33,25 @@ module.exports = function (app, z, RestaurantModel) {
                 lon: lon
             })
             .then(function(data) {
+                // data.restaurants.push({
+                //     featured_image: '',
+                //     test:'test'
+                // }
+                // for(obj in myRes){
+                //     console.log("JAiiiii:",obj._id)
+                //     // data.restaurants.add(myRes)
+                // }
                 data.restaurants.push({
-                    featured_image: '',
-                    test:'test'
+                    apiKey: '167c084567684c2076a14d3c0b36bc29',
+                    id: myRes[0]._id,
+                    name: myRes[0].name,
+                    average_cost_for_two: myRes[0].average_cost_for_two,
+                    price_range: myRes[0].price_range,
+                    has_online_delivery: myRes[0].has_online_delivery,
+                    has_table_booking: myRes[0].has_table_booking,
+                    cuisines: myRes[0].cuisines
                 });
-                console.log(data)
+                console.log(data);
                 res.json(data);
             })
             .catch(function(err) {

@@ -35,6 +35,7 @@
                 RestService
                     .findPlaceByName(obj)
                     .success(function (data) {
+                        // console.log(data)
                         vm.places = data;
                         $location.url("/home/guest/" + word + "/search");
                     })
