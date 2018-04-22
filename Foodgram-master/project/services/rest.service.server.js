@@ -20,12 +20,7 @@ module.exports = function (app, z, RestaurantModel) {
             .findRestaurantByName(name)
             .then(function (data) {
                 myRes = data;
-                console.log("JAiiiii:",myRes)
-
             });
-            // .catch(function(err) {
-            //     res.send(err);
-            // });
         z
             .search({
                 q: name,

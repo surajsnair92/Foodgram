@@ -19,7 +19,7 @@ module.exports = function (mongoose, q) {
     }
 
     function findRestaurantByName(name) {
-        return RestaurantModel.find({name: name})
+        return RestaurantModel.find({name: { $regex: '.*' + name + '.*' }})
     }
 
     function findRestaurantById(rId) {
