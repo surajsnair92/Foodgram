@@ -72,6 +72,27 @@
         }
     </style>
 </head>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="row container-fluid">
+        <form class="topform">
+            <div class="col-xs-6">
+                <input type="text" ng-model="model.keyword" class="search-query form-control" placeholder="Restaurant name.." />
+            </div>
+            <div class="col-xs-2 fsbtn" >
+                <button class="btn btn-danger" type="submit" ng-click="model.searchplace(model.keyword)">
+                    <span class=" glyphicon glyphicon-search"></span></button>
+            </div>
+        </form>
+        <div ng-if="model.userID" class="dropdown pull-right dpdn">
+            <a class="btn btn-danger dropdown-toggle btn-group-lg"
+               type="button" ng-click="model.logout()">Logout</a>
+        </div>
+        <div class="dropdown pull-right dpdn">
+            <a ng-hide="model.userID" class="btn btn-danger dropdown-toggle btn-group-lg"
+               type="button" data-toggle="modal" data-target="#myModal" >Login</a>
+        </div>
+    </div>
+</nav>
 
 <div class="container">
     <div>
@@ -131,11 +152,11 @@
                         <div ng-if="model.userID == undefined">
                             <button disabled title="Login to review"
                                     type="button" class="rvb hidden-xs btn btn-info btn-lg pull-right"
-                                    data-toggle="modal" data-target="#myModal">ReviewME</button>
+                                    data-toggle="modal" data-target="#exampleModal">ReviewME</button>
                         </div>
                         <div ng-if="model.userID !== undefined">
                             <button type="button" class="rvb hidden-xs btn btn-info btn-lg pull-right"
-                                    data-toggle="modal" data-target="#myModal">ReviewME</button>
+                                    data-toggle="modal" data-target="#exampleModal">ReviewME</button>
                         </div>
 
                         <button data-toggle="modal" data-target="#myModal"
@@ -217,4 +238,60 @@
         </div>
     </div>
 
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Enter review</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Review:</label>
+                        <textarea class="form-control" id="message-text" cols="10" rows="10" ng-model="model.review"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" ng-click="model.submit(model.review)">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-sm" data-backdrop="false"
+     id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content mdlc">
+            <div class="modal-header">
+                <button type="button" ng-click="model.eraseData()"
+                        class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h2 class="modal-title" id="myModalLabel">Login to your account</h2>
+                <div class="alert alert-dismissable alert-danger" ng-show="model.xerror">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    {{model.xerror}}
+                </div>
+            </div>
+            <div class="modal-body container-fluid">
+                <div class="form-group">
+                    <input type="text" ng-model="model.user.username"
+                           class="form-control" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control"
+                           ng-model="model.user.password" placeholder="Password">
+                </div>
+                <a class="btn btn-success btn-block" ng-click="model.login(model.user)">Login</a>
+                <a href="/api/auth/facebook" class="btn btn-primary btn-block">
+                    <span class="fa fa-facebook"></span>
+                    Facebook
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

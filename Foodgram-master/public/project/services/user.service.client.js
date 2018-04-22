@@ -18,7 +18,8 @@
             "findUserbytype" : findUserbytype,
             "register" : register,
             "logout" : logout,
-            "getMyLocation" : getMyLocation
+            "getMyLocation" : getMyLocation,
+            "getCurrentUser": getCurrentUser
         };
         return api;
 
@@ -52,6 +53,10 @@
 
         function findUserById(userId) {
             return $http.get("/api/user/" + userId);
+        }
+
+        function getCurrentUser() {
+            return $http.get("/api/currentUser");
         }
 
         function findUserByUsername(username) {

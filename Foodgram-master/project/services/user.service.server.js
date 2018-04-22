@@ -23,6 +23,7 @@ module.exports = function (app, userModel, z, IPinfo) {
 
     app.post('/dpi/login', passport.authenticate('local'), login);
     app.get("/api/user", findUser);
+    app.get("/api/currentUser", getCurrentUser);
     app.post('/api/register', register);
     app.get("/api/user/:userID", findUserByID);
     app.post("/dpi/user/update", updateUser);
@@ -45,6 +46,10 @@ module.exports = function (app, userModel, z, IPinfo) {
 
     function loggedin(req, res) {
         res.send(req.isAuthenticated() ? req.user : '0');
+    }
+
+    function getCurrentUser(req, res) {
+        res.send(req.user);
     }
 
     function getMyLocation(req, res) {

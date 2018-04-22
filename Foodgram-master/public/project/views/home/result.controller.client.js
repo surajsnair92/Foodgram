@@ -36,7 +36,7 @@
                     .findPlaceByName(obj)
                     .success(function (data) {
                         vm.places = data;
-                        $location.url("/home/guest/" + word + "/search");
+                        $location.url("/home/" + vm.userID + "/" + word);
                     })
             })
 
@@ -48,14 +48,15 @@
                 latLong = data.loc.split(",");
                 vm.lat = latLong[0];
                 vm.lon = latLong[1];
-                a = {lati: vm.lat, lngi: vm.lon};
+                a = {name: vm.search, lati: vm.lat, lngi: vm.lon};
                 RestService
                     .findPlaceByName(a)
                     .success(function (data) {
+                        console.log(data)
                         if(data.length == 0) {
                             vm.display = "Please enable location services";
                         }else {
-                            vm.places = data;
+                            vm.places = data.restaurants;
                             vm.pic = vm.places.featured_image;
                         }
                     });

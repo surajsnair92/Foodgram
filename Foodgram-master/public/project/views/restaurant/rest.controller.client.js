@@ -72,19 +72,23 @@
                 .success(function (user) {
                     vm.user = user;
                     vm.uid = vm.user._id;
-                    vm.review.user = vm.userID;
-                    vm.review.placeID = vm.restID;
-                    vm.review.user_name = vm.user.username;
+
                     RestService
                         .findRestaurantByID(vm.restID)
                         .success(function (rest) {
                             vm.rest = rest;
-                            vm.review.place = vm.rest.name;
+                            var reviewObject = {
+                                user : vm.userID,
+                                placeID : vm.restID,
+                                user_name : vm.user.username,
+                                description: rev,
+                                place : vm.rest.name
+                            }
                             ReviewService
-                                .createReview(vm.userID, vm.review)
+                                .createReview(vm.userID, reviewObject)
                                 .success(function (newReview) {
-                                    init();
-                                    vm.review.description = ""
+                                    $('#exampleModal').modal('hide')
+                                    init()
                                 });
                         })
 
