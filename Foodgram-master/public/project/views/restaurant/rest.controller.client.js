@@ -94,10 +94,13 @@
 
 
         function init() {
+
+            console.log(vm.restID)
             ReviewService
                 .findReviewsforRes(vm.restID)
                 .success(function (data) {
                     vm.rs = data;
+
                 });
             RestService
                 .findRestaurantByID(vm.restID)
@@ -105,17 +108,20 @@
                     console.log(data);
                     vm.details = data;
                     vm.name = vm.details.name;
-                    vm.rating = (vm.details.user_rating.aggregate_rating / 5) * 100;
+                    vm.rating = vm.details.user_rating.aggregate_rating;
                     vm.range = (vm.details.price_range / 5) * 100;
                     vm.val = vm.details.has_online_delivery;
                     vm.pic = vm.details.featured_image;
                     vm.reserve = vm.details.has_table_booking;
                     vm.lat = vm.details.location.latitude;
                     vm.lon = vm.details.location.longitude;
+                    console.log(vm.lat)
+                    console.log(vm.lon)
                     RestService
                         .findNearByPlaces(vm.lat,vm.lon)
                         .success(function (data) {
-                            vm.nearby = data;
+                            vm.nearby = data.restaurants;
+
                         })
                 });
 

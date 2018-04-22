@@ -1,271 +1,220 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="row container-fluid">
-            <form class="topform">
-                <div class="col-xs-6">
-                <input type="text" ng-model="model.keyword" class="search-query form-control" placeholder="Restaurant name.." />
-                </div>
-                <div class="col-xs-2 fsbtn" >
-                     <button class="btn btn-danger" type="submit" ng-click="model.searchplace(model.keyword)">
-                           <span class=" glyphicon glyphicon-search"></span></button>
-                </div>
-            </form>
-        <div class="dropdown pull-right dpdn">
-            <div ng-if="model.userID == undefined">
-                <a class="btn btn-success sb"
-                   data-toggle="modal" data-target="#myLModal">Login</a>
-                <a class="btn btn-primary"
-                   href="#/home">Home</a>
-            </div>
-        </div>
-            <div class="dropdown pull-right dpdn">
-            <div ng-if="model.userID !== undefined">
-                <button class="btn btn-danger btn-group-lg"
-                        href="#/home" ng-click="model.logout()" type="button">Logout</button>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-            </div>
-            </div>
-        </div>
-    </div>
-</nav>
+        /* Add a gray background color with some padding */
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f1f1f1;
+        }
 
-<div class="container-fluid restc">
-    <div class="panel-body">
-    <div class="container-fluid">
-        <div class="col-xs-4 pull-left">
-        <div>
-            <div  ng-if="model.pic !== []">
-                <img class="img-responsive restimg"
-                     ng-src="{{model.details.featured_image}}"/>
-            </div>
-            <div ng-if="model.pic == []">
-                <img class="img-responsive restimg"
-                     ng-src="project/css/images/restaurants-default.jpg"/>
-            </div>
-        </div>
-        <!--<img class="img-responsive restimg"
-             ng-src="{{model.details.featured_image}}"/>-->
+        /* Header/Blog Title */
+        .header {
+            padding: 30px;
+            font-size: 40px;
+            text-align: center;
+            background: white;
+        }
 
-        <h2>Click <a href="{{model.details.photos_url}}">here</a> for more images</h2>
-        </div>
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
 
-        <div>
-        <div class="panel panel-default textpt col-xs-4">
-            <div class="panel-heading ">
-                <div class="resname"><h1>{{model.details.name}}</h1></div>
-            </div>
-            <div class="panel-body">
-                <h4>Average Rating:</h4>
-                <div class="star-ratings-css">
-                    <div class="star-ratings-css-top " style="width: {{model.rating}}%">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                    <div class="star-ratings-css-bottom">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                </div>
-                <div class="cost">
-                <h4><b> Cost</b> </h4>
-                    Average<br/>
-                    ${{model.details.average_cost_for_two}} for two people.
-                </div>
-                <div class="prange">
-                <h4>Price Range:</h4>
-                <div class="star-ratings-css">
-                    <div class="star-ratings-css-top" style="width: {{model.range}}%">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                    <div class="star-ratings-css-bottom">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                </div>
-                </div>
-                <div class="addr">
-                    <h4><b>Address:</b><br/></h4>
-                    {{model.details.location.address}}
-                </div>
-                <div class="marks">
-                <div>
-                    <div  ng-if="model.val !== 0">
-                       <h4 > <span class="glyphicon glyphicon-ok icon-success"></span>
-                           Delivery </h4>
-                    </div>
-                    <div ng-if="model.val == 0">
-                        <h4><span class="glyphicon glyphicon-remove icon-sad"></span>
-                            Delivery</h4>
-                        <!-- code to render the regular video block -->
-                    </div>
-                </div>
-                <div>
-                    <div  ng-if="model.reserve !== 0">
-                        <h4 > <span class="glyphicon glyphicon-ok icon-success"></span>
-                            Reservation </h4>
-                    </div>
-                    <div ng-if="model.reserve == 0">
-                        <h4><span class="glyphicon glyphicon-remove icon-sad"></span>
-                            Reservation</h4>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-    </div>
-</div>
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            padding-left: 20px;
+        }
 
-<div class="panel">
-    <div class="panel-heading revc">
-        <h3 >User reviews:</h3>
-        <div ng-if="model.userID == undefined">
-            <button disabled title="Login to review"
-                    type="button" class="rvb hidden-xs btn btn-info btn-lg pull-right"
-                    data-toggle="modal" data-target="#myModal">ReviewME</button>
-        </div>
-        <div ng-if="model.userID !== undefined">
-            <button type="button" class="rvb hidden-xs btn btn-info btn-lg pull-right"
-                    data-toggle="modal" data-target="#myModal">ReviewME</button>
-        </div>
+        /* Fake image */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
 
-        <button data-toggle="modal" data-target="#myModal"
-                class="pull-right btn-lg visible-xs pull-right rvb">
-            <span class="glyphicon glyphicon-edit"></span> </button>
-    </div>
-    <div class="panel-body mdlc" >
-        <div class="container-fluid">
-            <div class="media" ng-repeat="review in model.rs | filter: model.query | orderBy: '-date'">
-                <div class="media-left">
-                    <img src="project/css/images/userimg.jpeg" class="media-object defres">
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">
-                        <div ng-if="model.userID !== undefined && model.userID !== review.user">
-                            <a href="#/home/{{model.userID}}/profile/{{review.user}}">{{review.user_name}} </a>
-                        </div>
-                        <div ng-if="model.userID == undefined || model.userID == review.user">
-                            {{review.user_name}}
-                        </div>
-                        <small class="hidden-xs"><i>Posted on {{model.getDateFormat(review.date)|date:'MM-dd-yyyy'}}</i></small></h4>
-                            {{review.description}}
-                </div>
-            </div>
-        </div>
-    </div>
+        /* Add a card effect for articles */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
 
-</div>
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
-</div>
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
 
-
-
-
-
-    </div>
-</div>
-
-<div class="btmftr">
-    <h3>More places nearby</h3>
-    <div class="container-fluid nblst">
-        <div class="media respg" ng-repeat="review in model.nearby | filter: model.query | orderBy: '-date'">
-            <div class="col-sm-6 col-md-4 col-lg-4">
-                <div ng-if="model.userID == undefined">
-                    <a href="#/home/guest/search/{{review.R.res_id}}">
-                        <div>
-                            <div ng-if="review.featured_image.length !== 0">
-                                <img ng-src="{{review.featured_image}}" alt="Food" class="img-rounded" width="304" height="236">
-                            </div>
-                            <div ng-if="review.featured_image.length == 0">
-                                <img src="project/css/images/restaurants-default.jpg" alt="Food" class="img-rounded" width="304" height="236">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-
-                <div ng-if="model.userID !== undefined">
-                    <a href="#/home/{{model.userID}}/res/{{review.R.res_id}}">
-                        <div>
-                            <div ng-if="review.featured_image.length !== 0">
-                                <img ng-src="{{review.featured_image}}" alt="Food" class="img-rounded" width="304" height="236">
-                            </div>
-                            <div ng-if="review.featured_image.length == 0">
-                                <img src="project/css/images/restaurants-default.jpg" alt="Food" class="img-rounded" width="304" height="236">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="caption">
-                    <h3>{{review.name}}</h3>
-                    <h5>{{review.location.locality}}, {{review.location.city}}</h5>
-                    <h5><b>Cuisines :</b> {{review.cuisines}}</h5>
-                    <br/>
-                    <br/>
-                </div>
-            </div>
-        </div>
-    </div>
-        </div>
-</div>
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
 
 <div class="container">
-    <div class="modal rev fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <div class="reviewtitle">
-                        <h4 class="modal-title">Help us serve you better</h4>
-                    </div>
+    <div>
+        <div  ng-if="model.pic !== []">
+            <img class="img-responsive restimg"
+                 ng-src="{{model.details.featured_image}}"/>
+        </div>
+        <div ng-if="model.pic == []">
+            <img class="img-responsive restimg"
+                 ng-src="project/css/images/restaurants-default.jpg"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+
+                <div class="panel-heading ">
+                    <div class="resname"><h1>{{model.details.name}}</h1></div>
                 </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <textarea id="reviewdes" ng-model="model.review.description"
-                                  placeholder="Write your review here..." rows="10" cols="50"></textarea>
+                <div class="panel body">
+                    <div style="margin-left: 30px">
+                        <h4>Average Rating:</h4>
+                        <div class="star-ratings-css">
+                            <div class="star-ratings-css-top " style="width: {{model.details.rating}}%">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                            <div class="star-ratings-css-bottom">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                        </div>
+                        <div class="cost">
+                            <h4><b> Cost</b> </h4>
+                            Average<br/>
+                            ${{model.details.average_cost_for_two}} for two people.
+                        </div>
+                        <div class="prange">
+                            <h4>Price Range: {{model.details.price_range}}</h4>
+                            <div class="star-ratings-css">
+                                <div class="star-ratings-css-top" style="width: {{model.details.price_range}}%">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <div class="star-ratings-css-bottom">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                            </div>
+                        </div>
+                        <div class="addr">
+                            <h4><b>Address:</b><br/></h4>
+                            {{model.details.location.address}}
+                        </div>
                     </div>
-                    <a class="btn btn-success form-control"
-                       ng-click="model.submit(model.review)" data-dismiss="modal">Submit</a>
+
+
                 </div>
             </div>
+            <div style="margin-top: 20px">
+                <div class="panel">
+                    <div class="panel-heading revc">
+                        <h3 >User reviews:</h3>
+                        <div ng-if="model.userID == undefined">
+                            <button disabled title="Login to review"
+                                    type="button" class="rvb hidden-xs btn btn-info btn-lg pull-right"
+                                    data-toggle="modal" data-target="#myModal">ReviewME</button>
+                        </div>
+                        <div ng-if="model.userID !== undefined">
+                            <button type="button" class="rvb hidden-xs btn btn-info btn-lg pull-right"
+                                    data-toggle="modal" data-target="#myModal">ReviewME</button>
+                        </div>
 
+                        <button data-toggle="modal" data-target="#myModal"
+                                class="pull-right btn-lg visible-xs pull-right rvb">
+                            <span class="glyphicon glyphicon-edit"></span> </button>
+                    </div>
+                    <div class="panel-body mdlc" >
+                        <div class="container-fluid">
+                            <div class="media" ng-repeat="review in model.rs | filter: model.query | orderBy: '-date'">
+                                <div class="media-left">
+                                    <img src="project/css/images/userimg.jpeg" class="media-object defres">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">
+                                        <div ng-if="model.userID !== undefined && model.userID !== review.user">
+                                            <a href="#/home/{{model.userID}}/profile/{{review.user}}">{{review.user_name}} </a>
+                                        </div>
+                                        <div ng-if="model.userID == undefined || model.userID == review.user">
+                                            {{review.user_name}}
+                                        </div>
+                                        <small class="hidden-xs"><i>Posted on {{model.getDateFormat(review.date)|date:'MM-dd-yyyy'}}</i></small></h4>
+                                    {{review.description}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h3>Online Delivery <span ng-if="model.details.has_online_delivery == 0" class="glyphicon glyphicon-remove" style="font-size: 1em;margin-left: 20px;color: red"></span>
+                    <span ng-if="model.details.has_online_delivery == 1" class="glyphicon glyphicon-ok" style="font-size: 1em;margin-left: 20px;color: green"></span></h3>
+                <h3 >Table Bookings <span ng-if="model.details.has_table_booking == 0" class="glyphicon glyphicon-remove" style="font-size: 1em;margin-left: 20px;color: red"></span>
+                    <span ng-if="model.details.has_table_booking == 1" class="glyphicon glyphicon-ok" style="font-size: 1em;margin-left: 20px;color: green"></span></h3>
+            </div>
+            <div class="card" style="background-color: rgba(173,216,230,0.21)">
+                <h2>Around you,</h2>
+                <div class="row scrollingBox" style="height: 387px; overflow-y: scroll;">
+                    <div class="media respg" ng-repeat="review in model.nearby | filter: model.query | orderBy: '-date'">
+                        <div>
+                            <div ng-if="model.userID == undefined">
+                                <a href="#/home/guest/search/{{review.R.res_id}}">
+                                    <div>
+                                        <div ng-if="review.featured_image.length !== 0">
+                                            <img ng-src="{{review.featured_image}}" alt="Food" class="img-rounded" width="304" height="236">
+                                        </div>
+                                        <div ng-if="review.featured_image.length == 0">
+                                            <img src="project/css/images/restaurants-default.jpg" alt="Food" class="img-rounded" width="304" height="236">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div ng-if="model.userID !== undefined">
+                                <a href="#/home/{{model.userID}}/res/{{review.R.res_id}}">
+                                    <div>
+                                        <div ng-if="review.featured_image.length !== 0">
+                                            <img ng-src="{{review.featured_image}}" alt="Food" class="img-rounded" width="304" height="236">
+                                        </div>
+                                        <div ng-if="review.featured_image.length == 0">
+                                            <img src="project/css/images/restaurants-default.jpg" alt="Food" class="img-rounded" width="304" height="236">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="caption">
+                                <h3>{{review.name}}</h3>
+                                <h5>{{review.location.locality}}, {{review.location.city}}</h5>
+                                <h5><b>Cuisines :</b> {{review.cuisines}}</h5>
+                                <br/>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
 </div>
-<div class="modal fade bs-example-modal-sm" data-backdrop="false"
-     id="myLModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content mdlc" >
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span></button>
-                <h2 class="modal-title" id="myModalLabel">Login to your account</h2>
-                <div class="alert alert-dismissable alert-danger" ng-show="model.error">
-                    {{model.error}}
-                </div>
-            </div>
-            <div class="modal-body container-fluid">
-                <div class="form-group">
-                    <input type="text" ng-model="model.user.username"
-                           class="form-control" placeholder="Username">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control"
-                           ng-model="model.user.password" placeholder="Password">
-                </div>
-                <a class="btn btn-success btn-block" ng-click="model.login(model.user)">Login</a>
-                <a href="/api/auth/facebook" class="btn btn-primary btn-block">
-                    <span class="fa fa-facebook"></span>
-                    Facebook
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-<nav class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container-fluid">
-        <div class="navbar-text pull-right">
-            <a href="#/user/{{model.userID}}">
-                <span class="glyphicon glyphicon-user"></span>
-            </a>
-        </div>
-    </div>
-</nav>

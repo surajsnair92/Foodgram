@@ -132,7 +132,6 @@ img:hover {
     padding-bottom: 30px;
 }
 .restimg{
-    margin-top: 80px;
     width: 100%;
     border: groove;
     border: rgba(50,255,240,0.28);
@@ -257,10 +256,6 @@ img:hover {
     margin-left: 50px;
 }
 .resp{
-    margin-left: 50px;
-    margin-top: 90px;
-}
-.respgu{
     margin-left: 50px;
     margin-top: 90px;
 }
