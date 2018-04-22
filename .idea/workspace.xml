@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="0ba865e1-d09c-498d-a946-7cfeb13e274f" name="Default" comment="restaurant view updated">
       <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/.bin/sshpk-conv" />
@@ -597,6 +598,18 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/zomato/README.md" />
       <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/zomato/index.js" />
       <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/zomato/package.json" />
+=======
+    <list default="true" id="462fd854-be01-4313-8aa0-e1b5ea7be1fd" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Foodgram-master/project/model/restaurant/restaurant.model.server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Foodgram-master/project/model/restaurant/restaurant.schema.server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foodgram-master/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Foodgram-master/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foodgram-master/project/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Foodgram-master/project/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foodgram-master/project/services/rest.service.server.js" beforeDir="false" afterPath="$PROJECT_DIR$/Foodgram-master/project/services/rest.service.server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foodgram-master/public/project/services/rest.service.client.js" beforeDir="false" afterPath="$PROJECT_DIR$/Foodgram-master/public/project/services/rest.service.client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foodgram-master/public/project/views/newrestaurant/newrestaurant.controller.client.js" beforeDir="false" afterPath="$PROJECT_DIR$/Foodgram-master/public/project/views/newrestaurant/newrestaurant.controller.client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foodgram-master/public/project/views/newrestaurant/newrestaurant.view.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/Foodgram-master/public/project/views/newrestaurant/newrestaurant.view.client.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foodgram-master/public/project/views/restaurant/rest.controller.client.js" beforeDir="false" afterPath="$PROJECT_DIR$/Foodgram-master/public/project/views/restaurant/rest.controller.client.js" afterDir="false" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -609,6 +622,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="rest.client.view.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/restaurant/rest.client.view.html">
@@ -627,51 +641,94 @@
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="e#11737#11744#1" expanded="true" />
+=======
+    <leaf>
+      <file leaf-file-name="rest.service.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Foodgram-master/project/services/rest.service.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-187">
+              <caret column="50" selection-start-column="50" selection-end-column="50" />
+              <folding>
+                <marker date="1523755602097" expanded="true" signature="62:238" ph="..." />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/home/home.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
               <caret line="179" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
               <folding />
+=======
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Foodgram-master/project/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="user.service.server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Foodgram-master/project/services/user.service.server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="174">
               <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="29" />
               <folding />
+=======
+      <file leaf-file-name="restaurant.schema.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Foodgram-master/project/model/restaurant/restaurant.schema.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="19" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="user.service.client.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/services/user.service.client.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
               <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
               <folding />
+=======
+      <file leaf-file-name="newrestaurant.view.client.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/newrestaurant/newrestaurant.view.client.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="161">
               <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="35" />
               <folding />
+=======
+      <file leaf-file-name="review.model.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Foodgram-master/project/model/review/review.model.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="37" column="45" lean-forward="true" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="result.view.client.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/home/result.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -688,32 +745,66 @@
             <state relative-caret-position="144">
               <caret line="58" column="57" lean-forward="false" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
               <folding />
+=======
+      <file leaf-file-name="message.model.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Foodgram-master/project/model/messages/message.model.server.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="message.schema.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Foodgram-master/project/model/messages/message.schema.server.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="review.schema.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Foodgram-master/project/model/review/review.schema.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="rest.controller.client.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/restaurant/rest.controller.client.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="63">
               <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
               <folding />
+=======
+      <file leaf-file-name="user.schema.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Foodgram-master/project/model/user/user.schema.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="user_home.client.view.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/home/user_home.client.view.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="6" />
               <folding />
+=======
+      <file leaf-file-name="restaurant.model.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Foodgram-master/project/model/restaurant/restaurant.model.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="57" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="57" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+<<<<<<< HEAD
   <component name="FindInProjectRecents">
     <findStrings>
       <find>/api/rest/categories/near/</find>
@@ -730,6 +821,22 @@
       <find>home/:uid</find>
       <find>myModal</find>
       <find>reviewme</find>
+=======
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>/home/guest/create</find>
+      <find>myNModal</find>
+      <find>login</find>
+      <find>messagemodel</find>
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -738,6 +845,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Foodgram-master/server.js" />
         <option value="$PROJECT_DIR$/Foodgram-master/public/project/views/guest/guest.controller.client.js" />
         <option value="$PROJECT_DIR$/Foodgram-master/public/project/views/home/home.html" />
@@ -753,6 +861,23 @@
         <option value="$PROJECT_DIR$/Foodgram-master/public/project/views/home/result.controller.client.js" />
         <option value="$PROJECT_DIR$/Foodgram-master/public/project/views/restaurant/rest.controller.client.js" />
         <option value="$PROJECT_DIR$/Foodgram-master/public/project/views/restaurant/rest.client.view.html" />
+=======
+        <option value="$PROJECT_DIR$/Foodgram-master/public/index.html" />
+        <option value="$PROJECT_DIR$/Foodgram-master/public/project/views/restaurant/createRestaurant.controller.client.js" />
+        <option value="$PROJECT_DIR$/Foodgram-master/public/project/views/restaurant/createRestaurant.client.view.html" />
+        <option value="$PROJECT_DIR$/Foodgram-master/public/project/index.html" />
+        <option value="$PROJECT_DIR$/Foodgram-master/public/project/config.js" />
+        <option value="$PROJECT_DIR$/Foodgram-master/public/project/views/home/home.html" />
+        <option value="$PROJECT_DIR$/Foodgram-master/public/project/views/restaurant/rest.controller.client.js" />
+        <option value="$PROJECT_DIR$/Foodgram-master/project/model/review/review.model.server.js" />
+        <option value="$PROJECT_DIR$/Foodgram-master/public/project/views/newrestaurant/newrestaurant.controller.client.js" />
+        <option value="$PROJECT_DIR$/Foodgram-master/public/project/services/rest.service.client.js" />
+        <option value="$PROJECT_DIR$/Foodgram-master/project/model/restaurant/restaurant.model.server.js" />
+        <option value="$PROJECT_DIR$/Foodgram-master/project/app.js" />
+        <option value="$PROJECT_DIR$/Foodgram-master/project/services/rest.service.server.js" />
+        <option value="$PROJECT_DIR$/Foodgram-master/project/model/restaurant/restaurant.schema.server.js" />
+        <option value="$PROJECT_DIR$/Foodgram-master/public/project/views/newrestaurant/newrestaurant.view.client.html" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
       </list>
     </option>
   </component>
@@ -764,6 +889,7 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/Foodgram-master/node_modules" />
+<<<<<<< HEAD
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -787,6 +913,26 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+=======
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/Foodgram-master/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="20" />
+    <option name="y" value="43" />
+    <option name="width" value="1400" />
+    <option name="height" value="781" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -803,13 +949,21 @@
               <item name="Foodgram" type="b2602c69:ProjectViewProjectNode" />
               <item name="Foodgram" type="462c0819:PsiDirectoryNode" />
               <item name="Foodgram-master" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
             </path>
             <path>
               <item name="Foodgram" type="b2602c69:ProjectViewProjectNode" />
               <item name="Foodgram" type="462c0819:PsiDirectoryNode" />
               <item name="Foodgram-master" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
             </path>
             <path>
               <item name="Foodgram" type="b2602c69:ProjectViewProjectNode" />
@@ -817,6 +971,18 @@
               <item name="Foodgram-master" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name="messages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Foodgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Foodgram" type="462c0819:PsiDirectoryNode" />
+              <item name="Foodgram-master" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
             </path>
             <path>
               <item name="Foodgram" type="b2602c69:ProjectViewProjectNode" />
@@ -831,6 +997,17 @@
               <item name="Foodgram" type="462c0819:PsiDirectoryNode" />
               <item name="Foodgram-master" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Foodgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Foodgram" type="462c0819:PsiDirectoryNode" />
+              <item name="Foodgram-master" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
               <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -852,7 +1029,11 @@
               <item name="Foodgram-master" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="css" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
             </path>
             <path>
               <item name="Foodgram" type="b2602c69:ProjectViewProjectNode" />
@@ -860,7 +1041,11 @@
               <item name="Foodgram-master" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="services" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
             </path>
             <path>
               <item name="Foodgram" type="b2602c69:ProjectViewProjectNode" />
@@ -869,6 +1054,10 @@
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name="guest" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
             </path>
             <path>
               <item name="Foodgram" type="b2602c69:ProjectViewProjectNode" />
@@ -886,7 +1075,11 @@
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="newrestaurant" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
             </path>
             <path>
               <item name="Foodgram" type="b2602c69:ProjectViewProjectNode" />
@@ -895,12 +1088,17 @@
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="user" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
@@ -912,6 +1110,25 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
+=======
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.selected.package.prettier" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Foodgram-master/project/model/restaurant" />
+    </key>
+  </component>
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -925,6 +1142,7 @@
     </option>
   </component>
   <component name="RunManager">
+<<<<<<< HEAD
     <configuration name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="server.js" working-dir="$PROJECT_DIR$/Foodgram-master" />
     <recent_temporary>
       <list size="1">
@@ -935,11 +1153,21 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+=======
+    <configuration name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="server.js" working-dir="$PROJECT_DIR$/Foodgram-master" />
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.server.js" />
+      </list>
+    </recent_temporary>
+  </component>
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="0ba865e1-d09c-498d-a946-7cfeb13e274f" name="Default" comment="" />
       <created>1523674331342</created>
       <option name="number" value="Default" />
@@ -998,11 +1226,46 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <changelist id="462fd854-be01-4313-8aa0-e1b5ea7be1fd" name="Default" comment="" />
+      <created>1523736404928</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1523736404928</updated>
+      <workItem from="1523736407407" duration="17151000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="17151000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="20" y="43" width="1400" height="781" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32956153" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.32956153" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32956153" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="4" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -1131,11 +1394,49 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="e#11737#11744#1" expanded="true" />
           </folding>
+=======
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1693" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/assignment/services/website.service.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="2" column="48" lean-forward="true" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/guest/guestpage.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-645">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/home/user_home.client.view.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/home/home.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Foodgram-master/server.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="588">
           <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
           <folding />
@@ -1179,11 +1480,51 @@
         <state relative-caret-position="357">
           <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="57" />
           <folding />
+=======
+        <state relative-caret-position="-248">
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/restaurant/createRestaurant.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="64" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/restaurant/createRestaurant.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/home/home.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="8442">
           <caret line="402" column="5" lean-forward="false" selection-start-line="402" selection-start-column="5" selection-end-line="402" selection-end-column="5" />
           <folding />
@@ -1219,11 +1560,23 @@
         <state relative-caret-position="1134">
           <caret line="54" column="29" lean-forward="true" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
           <folding />
+=======
+        <state relative-caret-position="311">
+          <caret line="331" column="14" selection-start-line="331" selection-start-column="14" selection-end-line="331" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/home/result.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/guest/guest.controller.client.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1680">
           <caret line="80" column="56" lean-forward="false" selection-start-line="80" selection-start-column="56" selection-end-line="80" selection-end-column="56" />
           <folding />
@@ -1355,11 +1708,109 @@
         <state relative-caret-position="183">
           <caret line="156" column="9" lean-forward="false" selection-start-line="156" selection-start-column="9" selection-end-line="156" selection-end-column="9" />
           <folding />
+=======
+        <state relative-caret-position="-572">
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/restaurant/rest.client.view.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/services/message.service.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-335" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/home/result.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/restaurant/rest.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1680">
+          <caret line="112" column="46" selection-start-line="112" selection-start-column="46" selection-end-line="112" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/newrestaurant/newrestaurant.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/project/model/user/user.model.server.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/app.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/services/rest.service.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/project/services/review.service.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/project/model/messages/message.model.server.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/project/model/user/user.schema.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/project/model/messages/message.schema.server.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/project/model/restaurant/restaurant.model.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="57" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/project/services/rest.service.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret column="50" selection-start-column="50" selection-end-column="50" />
+          <folding>
+            <marker date="1523755602097" expanded="true" signature="62:238" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/project/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/project/model/review/review.model.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="37" column="45" lean-forward="true" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Foodgram-master/project/model/review/review.schema.server.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="147">
           <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="19" />
           <folding />
@@ -1431,6 +1882,24 @@
         <state relative-caret-position="63">
           <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
           <folding />
+=======
+        <state relative-caret-position="135">
+          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/project/model/restaurant/restaurant.schema.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foodgram-master/public/project/views/newrestaurant/newrestaurant.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+>>>>>>> 5d7c8861e9933bb900f4d55ad27736f1b5d42874
         </state>
       </provider>
     </entry>

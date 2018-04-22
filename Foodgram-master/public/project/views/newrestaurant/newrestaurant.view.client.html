@@ -1,9 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
-<p>Works!!</p>
-</body>
-</html>
+
+
+<!--cuisines: String,-->
+<!--location:-->
+<div class="container-fluid ">
+<form>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input ng-model="model.restaurant.name" type="text" class="form-control" id="resName" placeholder="Restaurant Name">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Average Cost</label>
+        <div class="col-sm-10">
+            <input ng-model="model.restaurant.average_cost_for_two" type="number" class="form-control" id="resCost" placeholder="Enter Cost">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Price Range</label>
+        <div class="col-sm-10">
+            <input ng-model="model.restaurant.price_range" type="number" class="form-control" id="resPrice" placeholder="Enter Price Range">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Has Online Delivery?</label>
+        <div class="col-sm-10">
+            <input ng-model="model.restaurant.has_online_delivery" type="number" class="form-control" id="resDelivery" placeholder="Enter 1 for yes and 0 for No">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Has Table Booking?</label>
+        <div class="col-sm-10">
+            <input ng-model="model.restaurant.has_table_booking" type="number" class="form-control" id="resBooking" placeholder="Enter 1 for yes and 0 for No">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Cuisine</label>
+        <div class="col-sm-10">
+            <input ng-model="model.restaurant.cuisines" type="text" class="form-control" id="resCuisine" placeholder="Enter Cuisines">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label text-center text-primary">Location</label>
+        <div class="col-sm-10">
+            <!--<input ng-model="model.restaurant.location" type="text" class="form-control" id="resImage" placeholder="Enter Location   ">-->
+            <label text-angular="Location"></label>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Street Address 1</label>
+        <div class="col-sm-10">
+            <input ng-model="model.restaurant.location.streetAddress1" type="text" class="form-control" id="resStreet1" placeholder="Enter Street Address 1">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Street Address 2</label>
+        <div class="col-sm-10">
+            <input ng-model="model.restaurant.location.streetAddress2" type="text" class="form-control" id="resStreet2" placeholder="Enter Street Address 2">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">City</label>
+        <div class="col-sm-10">
+            <input ng-model="model.restaurant.location.city" type="text" class="form-control" id="resCity" placeholder="Enter City">
+        </div>
+    </div>
+
+    <!--<div class="form-group row">-->
+        <!--<div class="col-sm-10">-->
+            <!--<input ng-model="model.restaurant.location" type="text" class="form-control" id="resImage" placeholder="Enter City">-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <button class="btn btn-block btn-primary" ng-click="model.createRestaurant(model.restaurant)">Submit</button>
+
+</form>
+</div>

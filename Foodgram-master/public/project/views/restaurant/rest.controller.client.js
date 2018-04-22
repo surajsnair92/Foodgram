@@ -109,7 +109,7 @@
             RestService
                 .findRestaurantByID(vm.restID)
                 .success(function (data) {
-                    console.log(data)
+                    console.log(data);
                     vm.details = data;
                     vm.name = vm.details.name;
                     vm.rating = vm.details.user_rating.aggregate_rating;
