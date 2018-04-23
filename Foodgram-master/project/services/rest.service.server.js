@@ -1,5 +1,7 @@
 module.exports = function (app, z, RestaurantModel) {
-
+    var multer = require('multer');
+    var upload = multer({ dest: __dirname+'/../../public/project/uploads'});
+    app.post("/api/upload", upload.single('myFile'), uploadImage);
     // var locapi = "https://maps.googleapis.com/maps/api/geocode/json?address=";
     // var location = "Boston,+MA";
     // var key =  "&key=AIzaSyC89pv2EHlwGL9eio5DFM_FMRIhoLz9s8Q";
@@ -9,6 +11,26 @@ module.exports = function (app, z, RestaurantModel) {
     app.post("/api/rest/places/near/", findNearByPlaces);
     app.post("/api/rest/place/name", findPlaceByName);
     app.post("/api/rest/place/city", findPlaceByCity);
+
+    function uploadImage(req, res) {
+
+        var restaurant         = req.body.restaurant;
+        var myFile        = req.file;
+        var originalname  = myFile.originalname; // file name on user's computer
+        var filename      = myFile.filename;     // new file name in upload folder
+        var path          = myFile.path;         // full path of uploaded file
+        var destination   = myFile.destination;  // folder where file is saved to
+        var size          = myFile.size;
+        var mimetype      = myFile.mimetype;
+
+
+        restaurant.featured_image = originalname;
+        console.log(restaurant.featured_image)
+        console.log("hleeo from rest server:",restaurant);
+        res.send(200);
+
+}
+
 
     function findPlaceByName(req, res) {
         var obj = req.body;
