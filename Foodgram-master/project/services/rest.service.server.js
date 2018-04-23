@@ -1,5 +1,7 @@
 module.exports = function (app, z, RestaurantModel) {
-
+    var multer = require('multer');
+    var upload = multer({ dest: __dirname+'/../../public/project/uploads'});
+    app.post("/api/upload", upload.single('myFile'), uploadImage);
     // var locapi = "https://maps.googleapis.com/maps/api/geocode/json?address=";
     // var location = "Boston,+MA";
     // var key =  "&key=AIzaSyC89pv2EHlwGL9eio5DFM_FMRIhoLz9s8Q";
@@ -11,6 +13,7 @@ module.exports = function (app, z, RestaurantModel) {
     app.post("/api/rest/place/city", findPlaceByCity);
     app.get("/api/allrest/:userId", findRestByUserId);
 
+
     function findRestByUserId(req, res) {
         var id = req.params.userId;
         RestaurantModel
@@ -20,6 +23,7 @@ module.exports = function (app, z, RestaurantModel) {
                 console.log(data)
             })
     }
+
     function findPlaceByName(req, res) {
         var obj = req.body;
         var name = obj.name;

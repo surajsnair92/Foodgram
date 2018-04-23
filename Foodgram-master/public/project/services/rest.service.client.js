@@ -20,6 +20,7 @@
 
             restaurant.location.streetAddress1 = restaurant.location.streetAddress1.split(' ').join('+');
             restaurant.location.streetAddress2 = restaurant.location.streetAddress2.split(' ').join('+');
+            restaurant.featured_image = "../project/uploads/newRest.jpg";
             // console.log( restaurant.location.streetAddress1);
             // console.log( restaurant.location.streetAddress2);
             var str = "https://maps.googleapis.com/maps/api/geocode/json?address="+restaurant.location.streetAddress1+",+"+restaurant.location.streetAddress2+",+"+restaurant.location.city+"&key=AIzaSyC98Xbpx1VetC0jixHstgdZ1ruOxVTWhzc";
