@@ -9,7 +9,17 @@ module.exports = function (app, z, RestaurantModel) {
     app.post("/api/rest/places/near/", findNearByPlaces);
     app.post("/api/rest/place/name", findPlaceByName);
     app.post("/api/rest/place/city", findPlaceByCity);
+    app.get("/api/allrest/:userId", findRestByUserId);
 
+    function findRestByUserId(req, res) {
+        var id = req.params.userId;
+        RestaurantModel
+            .findRestaurantByUserId(id)
+            .then(function (data) {
+                res.json(data);
+                console.log(data)
+            })
+    }
     function findPlaceByName(req, res) {
         var obj = req.body;
         var name = obj.name;

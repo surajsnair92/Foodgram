@@ -8,6 +8,7 @@ module.exports = function (mongoose) {
         email: String,
         phone: String,
         type: String,
+        role: String,
         google: {
             id:    String,
             token: String

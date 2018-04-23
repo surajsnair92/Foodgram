@@ -11,11 +11,13 @@
             "findRestaurantByID" : findRestaurantByID,
             "findNearByPlaces" : findNearByPlaces,
             "findPlaceByName" : findPlaceByName,
-            "findPlaceByCity" : findPlaceByCity
+            "findPlaceByCity" : findPlaceByCity,
+            "findRestByUserId": findRestByUserId
         };
         return api;
 
         function createRestaurant(restaurant) {
+
             restaurant.location.streetAddress1 = restaurant.location.streetAddress1.split(' ').join('+');
             restaurant.location.streetAddress2 = restaurant.location.streetAddress2.split(' ').join('+');
             // console.log( restaurant.location.streetAddress1);
@@ -54,6 +56,9 @@
 
         function findPlaceByCity(city) {
             return $http.post("/api/rest/place/city",city);
+        }
+        function findRestByUserId(userId) {
+            return $http.get("/api/allrest/" + userId);
         }
 
     }

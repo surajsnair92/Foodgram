@@ -10,6 +10,7 @@ module.exports = function (mongoose, q) {
         "findRestaurantById" : findRestaurantById,
         "updateRestaurant" : updateRestaurant,
         "deleteRestaurant" : deleteRestaurant,
+        "findRestaurantByUserId": findRestaurantByUserId
     };
     return api;
 
@@ -28,6 +29,9 @@ module.exports = function (mongoose, q) {
 
     function deleteRestaurant(rId) {
         return RestaurantModel.delete({to_id : rId })
+    }
+    function findRestaurantByUserId(uId) {
+        return RestaurantModel.find({user : uId })
     }
 
 

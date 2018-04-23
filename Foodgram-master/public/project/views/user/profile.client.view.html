@@ -23,6 +23,7 @@
                 <li class="visible-xs visible-sm">
                     <a data-toggle="modal" data-target="#myModal">Delete user</a>
                 </li>
+
                 <li class="visible-xs visible-sm">
                     <a ng-click="model.logout()">Logout</a>
                 </li>
@@ -40,6 +41,14 @@
             <li><a href="#/user/{{model.userID}}/reviews">My Reviews</a></li>
             <li><a href="#/user/{{model.userID}}/messages">My Messages</a></li>
             <li><a data-toggle="modal" data-target="#myModal">Delete account</a></li>
+            <li ng-if="model.role === 'Owner'">
+                <a ng-href="#/home/{{model.userID}}/newrestaurant">Add Restaurant
+                </a>
+            </li>
+            <li ng-if="model.role === 'Owner'">
+                <a ng-href="#/home/{{model.userID}}/allrest">View my restaurants</a>
+            </li>
+
         </ul>
     </div>
 
@@ -115,6 +124,16 @@
                    id="profile-phone"
                    value="C"
                    type="text"
+            />
+        </div>
+        <div class="form-group">
+            <label for="profile-phone">Role</label>
+            <input class="form-control"
+                   ng-model="model.user.role"
+                   id="profile-role"
+                   value="C"
+                   type="text"
+                   disabled
             />
         </div>
     </div>

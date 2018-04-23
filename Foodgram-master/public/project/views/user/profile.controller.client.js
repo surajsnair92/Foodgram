@@ -62,6 +62,7 @@
                 vm.user = user;
                 vm.lname = user.lastname;
                 vm.fname = user.username;
+                vm.role = user.role;
             });
         }
         init();
@@ -136,6 +137,7 @@
                 });
         }
         function init() {
+
             ReviewService
                 .findAllReviews(vm.pID)
                 .success(function (reviews) {
@@ -144,10 +146,12 @@
             UserService
                 .findUserById(vm.pID)
                 .success(function (user) {
+
                 vm.curuser = user;
                 vm.lastname = user.lastname;
                 vm.firstname = user.firstname;
                 vm.username = user.username;
+
             });
         }
         init();

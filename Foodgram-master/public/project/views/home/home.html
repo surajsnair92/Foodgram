@@ -8,10 +8,6 @@
             <a class="btn btn-success" type="button"
                data-toggle="modal" data-target="#myModal">Login
             </a>
-            <a class="btn btn-info" type="button"
-               data-toggle="modal" data-target="#myModal"
-               ng-href="#/home/newrestaurant">Add Restaurant
-            </a>
         </div>
         <div class="navbar-header">
             <button type="button" class="navbar-toggle"
@@ -228,12 +224,12 @@
                     <span class="ngf" ng-if="form1.CPassword.$error.required">Re-enter your password</span>
                 </div>
                     <div class="form-check">
-                        <input name="102" type="radio" id="radio106" ng-model="model.user.userrole" value = "User">
+                        <input name="102" type="radio" id="radio106" ng-model="model.user.role" value = "User">
                         <label for="radio106">User</label>
                     </div>
 
                     <div class="form-check">
-                        <input name="102" type="radio" id="radio107" ng-model="model.user.userrole" value="Owner">
+                        <input name="102" type="radio" id="radio107" ng-model="model.user.role" value="Owner">
                         <label for="radio107">Owner</label>
                     </div>
 

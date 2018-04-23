@@ -59,7 +59,7 @@
         init();
 
         function register(newuser) {
-            if (newuser.userrole == "User") {
+            console.log(newuser);
                 if (newuser && newuser.username && newuser.password && newuser.cpassword) {
                     if (newuser.password === newuser.cpassword) {
                         UserService
@@ -88,10 +88,6 @@
                 } else {
                     vm.uerror = "Enter Username";
                 }
-            }
-            else if(newuser.userrole == "Owner"){
-                console.log("As Owner");
-            }
         }
 
         function login(user) {
